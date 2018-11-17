@@ -1,0 +1,49 @@
+<!-- Describe task in general -->
+
+<p>
+    Sum two passed ints
+</p>
+
+<p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>Input: </strong> Two arguments. Both are int
+</p>
+
+<p>
+    <strong>Output: </strong> Int. 
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">sumTwo(2, 3) == 5
+sumTwo(5, 7) == 12
+</pre>
+{% else %}
+<pre class="brush: python">sum_two(2, 3) == 5
+sum_two(5, 7) == 12
+</pre>
+{% endif %}
+</div>
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    <i>(math is used everywhere)</i>
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p>
+    <strong>Precondition:</strong>
+    <i>both given ints should be between -1000 and 1000</i>
+</p>
