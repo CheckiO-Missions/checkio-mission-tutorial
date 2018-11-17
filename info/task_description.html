@@ -1,14 +1,10 @@
-<!-- Describe task in general -->
+<p><i>(at the top right of the mission description there always is a list of available translations)</i></p>
 
-<p>
-    Sum two passed ints
-</p>
+<p>This is a test mission, the purpose of which is to explain how to solve tasks on CheckiO and how to get the most out of solving them. When the mission is solved, one more station become available for you, containing more complex missions.</p>
 
-<p style="text-align: center;">
-    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
-</p>
+<p>So this task is the easiest for you. Write a function that will receive 2 numbers as input and it should return the multiplication of these 2 numbers.</p>
 
-<!-- Explain input and output values -->
+
 <p>
     <strong>Input: </strong> Two arguments. Both are int
 </p>
@@ -18,32 +14,69 @@
 </p>
 
 
-<!-- Put some usage examples -->
 <div class="for_info_only">
     <p>
         <strong>Example:</strong>
     </p>
 
 {% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">sumTwo(2, 3) == 5
-sumTwo(5, 7) == 12
+<pre class="brush: javascript">multTwo(2, 3) == 6
+multTwo(1, 0) == 0
 </pre>
 {% else %}
-<pre class="brush: python">sum_two(2, 3) == 5
-sum_two(5, 7) == 12
+<pre class="brush: python">mult_two(2, 3) == 6
+mult_two(1, 0) == 0
 </pre>
 {% endif %}
 </div>
-<!-- Here you can explain how it can be used in development and what is usage of this. -->
-<!-- The section is optional -->
-<p class="for_info_only">
-    <strong>How it is used: </strong>
-    <i>(math is used everywhere)</i>
+
+<p><b>How does it work?:</b></p>
+
+<p>When you start solving the initial code is always consists of an “empty” function (which you need to fill in as the solution) and asserts under this function. You should pay attention to is that your function should return values, and not to print them. 
+
+{% if interpreter.slug == "js-node" %}
+That is, use <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/return">the return command</a> instead of <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/API/Console/log">the console.log function</a>.
+{% else %}
+That is, use the return command instead of the print function. <a target="_blank" href="https://stackoverflow.com/questions/7129285/what-is-the-purpose-of-the-return-statement">Check this short explanation.</a>
+{% endif %}
 </p>
 
-<!-- Here you can explain some constraints for input-->
-<!-- The section is optional -->
-<p>
-    <strong>Precondition:</strong>
-    <i>both given ints should be between -1000 and 1000</i>
-</p>
+<p>The asserts after your function you can use in order to check yourself  by pressing the “Run” button (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_run.png" />). CheckiO also uses several additional tests in order to check your solution when you click the “Check” button (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_check.png" />).</p>
+
+<p>If the solution didn’t pass the internal tests, the right panel will display an error message containing 3 items.</p>
+
+<ul>
+<li><b>Fail:</b> - shows how your function was called.</li>
+<li><b>Your Result:</b> - shows what it returned.</li>
+<li><b>Right Result:</b> - what it should’ve returned.</li>
+</ul>
+
+<p>To solve the task the “empty” function must be replaced with the following code.</p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+function multTwo(a, b) {
+    return a*b;
+}
+</pre>
+{% else %}
+<pre class="brush: python">
+def mult_two(a: int, b: int) -> int:
+    return a*b
+</pre>
+{% endif %}
+
+<p>Try to click “Check” button now. </p>
+
+
+<p>If the solution passes all the tests, the congratulations should appear on the right panel along with a suggestion for the following action. (Yes, this is not the end of the story).</p>
+
+<ul>
+<li><b>View other solutions</b> - when the task is solved, you can access the solutions of other players, which are divided into categories.</li>
+<li><b>Publish your solution</b> - publish your own solution.</li>
+<li><b>Next Mission</b> - go to the next mission.</li>
+</ul>
+
+<p>I’d recommend to go through the solutions of other players before publishing your own.</p>
+
+<p>The last but not the least, some tasks at the end have a list of hints for solving. But since in this task we’ve already described how to solve, then in hints we’ll add some interesting facts about CheckiO</p>

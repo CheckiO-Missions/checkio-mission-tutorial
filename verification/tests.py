@@ -12,25 +12,21 @@ TESTS = {
     "Basics": [
         {
             "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "answer": 6
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
+            "input": [0, 1],
+            "answer": 0
         }
     ],
     "Extra": [
         {
             "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
+            "answer": 18
         },
         {
             "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
+            "answer": 42
         }
     ]
 }
