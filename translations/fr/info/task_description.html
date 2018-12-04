@@ -1,16 +1,17 @@
-<p><i>(at the top right of the mission description there always is a list of available translations)</i></p>
+<p><i>(Une liste des différentes traductions possible est disponible en haut à droite de chaque description de mission)</i></p>
 
 <p>This is an into mission, the purpose of which is to explain how to solve missions on CheckiO and how to get the most out of solving them. When the mission is solved, one more station become available for you, containing more complex missions.</p>
+<p>C'est une mission d'échauffement, Le but est d'expliquer comment résoudre les missions sur CheckiO. Quand une mission est résolue, d'autres stations contenant d'autres missions plus difficile seront disponible pour vous.</p>
 
-<p>So this mission is the easiest one. Write a function that will receive 2 numbers as input and it should return the multiplication of these 2 numbers.</p>
+<p>Cette mission est la plus facile. Ecris une fonction qui recoit deux nombres en entrée et renvoir le résultat de la multiplication de ces deux nombres.</p>
 
 
 <p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <strong>En entrée: </strong> Deux arguments. Les deux sont des "integers".
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>En sortie: </strong> Un "integer". 
 </p>
 
 
@@ -30,9 +31,9 @@ mult_two(1, 0) == 0
 {% endif %}
 </div>
 
-<p><b>How does it work?:</b></p>
+<p><b>Commment tout celà fonctionne ?</b></p>
 
-<p>When you start solving the initial code is always consists of an “empty” function (which you need to fill in as the solution) and asserts under this function. You should pay attention to is that your function should return values, and not to print them. 
+<p>Au départ, le code est une fonction vide (que vous allez avoir à remplir). Ta fonction doit retourner des valeurs et surtout pas les afficher à l'écran. 
 
 {% if interpreter.slug == "js-node" %}
 That is, use <a target="_blank" target="_blank" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/return">the return command</a> instead of <a target="_blank" target="_blank" href="https://developer.mozilla.org/ru/docs/Web/API/Console/log">the console.log function</a>.
@@ -41,17 +42,17 @@ That is, use the return command instead of the print function. <a target="_blank
 {% endif %}
 </p>
 
-<p>The asserts after your function you can use in order to check yourself  by pressing the “Run” button (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_run.png" />). CheckiO also uses several additional tests in order to check your solution when you click the “Check” button (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_check.png" />).</p>
+<p>Tu peux vérifier ta réponse en cliquant sur le boutton "run" (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_run.png" />). CheckiO also uses several additional tests in order to check your solution when you click the “Check” button (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_check.png" />).</p>
 
-<p>If the solution didn’t pass the internal tests, the right panel will display an error message containing 3 items.</p>
+<p>Si ta solution ne passe pas les tests interne, le panel de droite affichera un message d'erreur en trois parties.</p>
 
 <ul>
-<li><b>Fail:</b> - shows how your function was called.</li>
-<li><b>Your Result:</b> - shows what it returned.</li>
-<li><b>Right Result:</b> - what it should’ve returned.</li>
+<li><b>Fail:</b> - Comment ta fonction a été appellée.</li>
+<li><b>Your Result:</b> - Ce qui à été retourné.</li>
+<li><b>Right Result:</b> - Ce qui est attendu.</li>
 </ul>
 
-<p>To solve the task the “empty” function must be replaced with the following code.</p>
+<p>Pour résoudre ce challenge, la fonction vide doit être remplacée par le code suivant :</p>
 
 {% if interpreter.slug == "js-node" %}
 <pre class="brush: javascript">
@@ -66,17 +67,17 @@ def mult_two(a: int, b: int) -> int:
 </pre>
 {% endif %}
 
-<p>Try to click “Check” button now. </p>
+<p>Clique sur le boutton "check".</p>
 
 
-<p>If the solution passes all the tests, the congratulations should appear on the right panel along with a suggestion for the following action. (Yes, this is not the end of the story).</p>
+<p>Si ta solution passe tous les tests, des messages de félicitations apparaitront sur le panneau de droite suivi d'une suggestion pour la suite (Oui, ce n'est jamais la fin de l'histoire).</p>
 
 <ul>
-<li><b>View other solutions</b> - when the task is solved, you can access the solutions of other players, which are divided into categories.</li>
-<li><b>Publish your solution</b> - publish your own solution.</li>
-<li><b>Next Mission</b> - go to the next mission.</li>
+<li><b>Voir les autres solutions</b></li>
+<li><b>Publies ta solution</b></li>
+<li><b>Prochaine mission</b></li>
 </ul>
 
-<p>I’d recommend to go through the solutions of other players before publishing your own.</p>
+<p>Je te recommande de regarder les solutions des autres avant de publier la tienne.</p>
 
-<p>The last but not the least, some tasks at the end have a list of hints for solving. But since in this task we’ve already described how to solve, then in hints we’ll add some interesting facts about CheckiO</p>
+<p>Certaines tâches possède une liste d'indices pour t'aider à résoudre.</p>
