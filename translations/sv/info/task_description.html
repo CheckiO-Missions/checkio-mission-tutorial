@@ -1,0 +1,82 @@
+<p><i>(i övre högra hörnet av uppdragsbeskrivningen finns alltid en lista över tillgängliga översättningar)</i></p>
+
+<p>Det här är ett introduktionsuppdrag med syfte att förklara hur du utför uppdrag här på CheckiO och hur du får ut så mycket som möjligt av att lösa dem. När du har utfört uppdraget får du tillgång till en ny station med mer avancerade uppdrag.</p>
+
+<p>Det här är därmed det lättaste uppdraget. Skriv en funktion som tar två heltal som indata och multiplicerar dem.</p>
+
+
+<p>
+    <strong>Indata: </strong> Två argument. Båda är heltal.
+</p>
+
+<p>
+    <strong>Utdata: </strong> Ett heltal.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Exempel:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">multTwo(2, 3) == 6
+multTwo(1, 0) == 0
+</pre>
+{% else %}
+<pre class="brush: python">mult_two(2, 3) == 6
+mult_two(1, 0) == 0
+</pre>
+{% endif %}
+</div>
+
+<p><b>Hur fungerar det?</b></p>
+
+<p>När du påbörjar en uppgift består koden alltid av en "tom" funktion (där du sedan ska skriva din kod) och ett antal testfall som kontrollerar att din lösning är korrekt. När du skriver din funktion är det viktigt att du returnerar resultatet och inte bara skriver ut det.
+
+{% if interpreter.slug == "js-node" %}
+Med andra ord behöver du använda <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return">return-kommandot</a> istället för <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Console/log">funktionen console.log</a>.
+{% else %}
+Med andra ord behöver du använda return-kommandot istället för funktionen print. <a target="_blank" target="_blank" href="https://stackoverflow.com/questions/7129285/what-is-the-purpose-of-the-return-statement">Förklaring</a>
+{% endif %}
+</p>
+
+<p>Testfallen efter din funktion kan användas för att kontrollera din lösning innan du skickar in den. För att göra detta, klicka på "Run"-knappen (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_run.png" />). När du sedan klickar på "Check"-knappen (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_check.png" />) kommer CheckiO att köra ytterligare testfall för att kontrollera att din lösning är korrekt.</p>
+
+<p>Om din lösning inte klarade testfallen så kommer panelen till höger att visa ett felmeddelande innehållande följande tre punkter:</p>
+
+<ul>
+<li><b>Fail:</b> - visar hur din funktion anropades.</li>
+<li><b>Your Result:</b> - visar resultatet av din funktion.</li>
+<li><b>Right Result:</b> - visar det rätta resultatet.</li>
+</ul>
+
+<p>För att lösa den här uppgiften måste den "tomma" funktionen bytas ut mot följande:</p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+function multTwo(a, b) {
+    return a*b;
+}
+</pre>
+{% else %}
+<pre class="brush: python">
+def mult_two(a: int, b: int) -> int:
+    return a*b
+</pre>
+{% endif %}
+
+<p>Prova sedan att klicka på "Check"-knappen.</p>
+
+
+<p>Om din lösning klarade alla testfallen kommer panelen till höger att visa en gratulation följd av förslag på vad du kan göra härnäst. (Nej, din resa slutar inte här).</p>
+
+<ul>
+<li><b>View other solutions</b> - när du har löst uppgiften kan du se hur andra spelare har löst den. Lösningarna är indelade i olika kategorier.</li>
+<li><b>Publish your solution</b> - publicera din egen lösning så att andra spelare kan se och kommentera den.</li>
+<li><b>Next Mission</b> - fortsätt till nästa uppdrag.</li>
+</ul>
+
+<p>Jag rekommenderar att du går igenom andra spelares lösningar innan du publicerar din egen.</p>
+
+<p>Sist men inte minst så har vissa uppdrag en lista med ledtrådar som du kan läsa vid behov, men eftersom vi redan har berättat hur du löser den här uppgiften så är "ledtrådarna" i detta fallet några intressanta fakta om CheckiO.</p>
