@@ -1,17 +1,16 @@
-"use strict";
+import assert from "assert";
 
-function multTwo(a, b) {
+function multTwo(a: number, b: number): number {
     // your code here
     return 0;
 }
 
-var assert = require('assert');
-if (!global.is_checking) {
-    console.log('Example:');
-    console.log(multTwo(3, 2));
+console.log('Example:');
+console.log(multTwo(3, 2));
 
-    // These "asserts" are used for self-checking and not for an auto-testing
-    assert.equal(multTwo(3, 2), 6);
-    assert.equal(multTwo(1, 0), 0);
-    console.log("Coding complete? Click 'Check' to earn cool rewards!");
-}
+// These "asserts" are used for self-checking
+assert.equal(multTwo(3, 2), 6);
+assert.equal(multTwo(0, 1), 0);
+
+console.log("Coding complete? Click 'Check' to earn cool rewards!");
+    
