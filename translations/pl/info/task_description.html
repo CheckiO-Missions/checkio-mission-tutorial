@@ -1,0 +1,82 @@
+<p><i>(w prawym górnym rogu opisu każdej misji znajduje się lista dostępnych tłumaczeń na inne języki)</i></p>
+
+<p>To jest misja wprowadzająca, której celem jest wyjaśnienie jak rozwiązywać misje CheckiO. Gdy misja zostanie ukończona, uzyskasz dostęp do kolejnej stacji zawierającej więcej misji o wyższym poziomie trudności.</p>
+
+<p>Ta misja jest najłatwiejsza. Napisz funkcję, która na wejściu przyjmuje 2 liczby i zwraca ich iloczyn.</p>
+
+
+<p>
+    <strong>Wejście: </strong> Dwa argumenty. Oba typu int.
+</p>
+
+<p>
+    <strong>Wyjście: </strong> Int. 
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Przykład:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">multTwo(2, 3) == 6
+multTwo(1, 0) == 0
+</pre>
+{% else %}
+<pre class="brush: python">mult_two(2, 3) == 6
+mult_two(1, 0) == 0
+</pre>
+{% endif %}
+</div>
+
+<p><b>Jak to działa?:</b></p>
+
+<p>Gdy zaczynasz rozwiązywać misję, kod początkowo zawiera “pustą” funkcję (którą musisz uzupełnić swoim rozwiązaniem), a poniżej znajdują się asserty. Powinieneś zwrócić uwagę na to, że twoja funkcja powinna zwracać wartości, a nie je wyświetlać.
+
+{% if interpreter.slug == "js-node" %}
+W tym celu używaj <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return">komendy return</a> zamiast <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Console/log">funkcji console.log</a>.
+{% else %}
+W tym celu używaj komendy return zamiast funkcji print. <a target="_blank" target="_blank" href="https://stackoverflow.com/questions/7129285/what-is-the-purpose-of-the-return-statement">Dowiedz się więcej w tym krótkim wyjaśnieniu.</a>
+{% endif %}
+</p>
+
+<p>Możesz użyć assertów znajdujących się poniżej twojej funkcji w celu sprawdzenia swojego rozwiązania wciskając przycisk “Run” (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_run.png" />). CheckiO używa też kilku dodatkowych testów aby sprawdzić twoje rozwiązanie po naciśnięciu przycisku “Check” (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_check.png" />).</p>
+
+<p>Jeśli rozwiązanie nie przejdzie testów wewnętrznych, panel po prawej stronie wyświetli informację o błędzie zawierającą 3 pozycje.</p>
+
+<ul>
+<li><b>Fail:</b> - jak twoja funkcja została wywołana.</li>
+<li><b>Your Result:</b> - co zwróciła.</li>
+<li><b>Right Result:</b> - co powinna zwrócić.</li>
+</ul>
+
+<p>Aby rozwiązać zadanie, “pusta” funkcja musi zostać zastąpiona następującym kodem:</p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+function multTwo(a, b) {
+    return a*b;
+}
+</pre>
+{% else %}
+<pre class="brush: python">
+def mult_two(a: int, b: int) -> int:
+    return a*b
+</pre>
+{% endif %}
+
+<p>Spróbuj teraz nacisnąć przycisk “Check”.</p>
+
+
+<p>Jeśli rozwiązanie przejdzie wszystkie testy, na prawym panelu powinny pojawić się gratulacje wraz z sugestią dotyczącą dalszego działania. (Tak, to nie koniec historii).</p>
+
+<ul>
+<li><b>View other solutions </b> - pokaż inne rozwiązania. Po rozwiązaniu zadania możesz uzyskać dostęp do podzielonych na kategorie rozwiązań innych użytkowników.</li>
+<li><b>Publish your solution </b> - udostępnij swoje rozwiązanie.</li>
+<li><b>Next Mission</b> - idź do kolejnej misji.</li>
+</ul>
+
+<p>Przed opublikowaniem własnego rozwiązania polecamy zapoznanie się z rozwiązaniami innych użytkowników.</p>
+
+<p>Ostatnia rzecz: niektóre zadania mają na końcu listę podpowiedzi/wskazówek. Jako że napisaliśmy już jak rozwiązać to zadanie, w sekcji wskazówek znajdziesz kilka ciekawostek o CheckiO.</p>
