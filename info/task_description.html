@@ -19,16 +19,7 @@
         <strong>Example:</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">multTwo(2, 3) == 6
-multTwo(1, 0) == 0
-</pre>
-{% else %}
-<pre class="brush: python">mult_two(2, 3) == 6
-mult_two(1, 0) == 0
-</pre>
-{% endif %}
-</div>
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
 <p><b>How does it work?:</b></p>
 

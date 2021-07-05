@@ -1,0 +1,23 @@
+{% comment %}New initial code template{% endcomment %}
+{% block env %}{% endblock env %}
+
+{% block start %}
+def mult_two(a: int, b: int) -> int:
+    # your code here
+    return None
+{% endblock start %}
+
+{% block example %}
+print('Example')
+print(mult_two(1, 2))
+{% endblock %}
+
+{% block tests %}
+{% for t in tests %}
+assert {% block call %}mult_two({{t.input.0}}, {{t.input.1}})
+{% endblock %} == {% block result %}{{t.answer}}{% endblock %}{% endfor %}
+{% endblock %}
+
+{% block final %}
+print("The first mission is done! Click 'Check' to earn cool rewards!")
+{% endblock final %}
