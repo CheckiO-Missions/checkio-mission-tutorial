@@ -17,7 +17,7 @@ console.log(multTwo(3, 2));
 {% block tests %}
 {% for t in tests %}
 assert.equal({% block call %}multTwo({{t.input.0}}, {{t.input.1}})
-{% endblock %}, {% block result %}{{t.answer|j}}{% endblock %}{% endfor %})
+{% endblock %}, {% block result %}{{t.answer|j}}{% endblock %});{% endfor %}
 {% endblock %}
 
 {% block final %}
