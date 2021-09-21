@@ -1,23 +1,22 @@
-<p><i>(Une liste des différentes traductions possible est disponible en haut à droite de chaque description de mission)</i></p>
+<p><i>(Il y a toujours une liste des traductions disponibles en haut à droite de la description d'une mission)</i></p>
 
-<p>This is an into mission, the purpose of which is to explain how to solve missions on CheckiO and how to get the most out of solving them. When the mission is solved, one more station become available for you, containing more complex missions.</p>
-<p>C'est une mission d'échauffement, Le but est d'expliquer comment résoudre les missions sur CheckiO. Quand une mission est résolue, d'autres stations contenant d'autres missions plus difficile seront disponible pour vous.</p>
+<p>Il s'agit d'un échauffement dont le but est d'expliquer comment résoudre des missions sur CheckiO et d'en tirer le maximum. Quand une mission est résolue, une station supplémentaire en contenant d'autres plus difficiles devient disponible.</p>
 
-<p>Cette mission est la plus facile. Ecris une fonction qui recoit deux nombres en entrée et renvoir le résultat de la multiplication de ces deux nombres.</p>
+<p>Cette mission est donc la plus facile. Écrivez une fonction qui reçoit 2 entiers en arguments et qui doit retourner le produit de ces deux nombres.</p>
 
 
 <p>
-    <strong>En entrée: </strong> Deux arguments. Les deux sont des "integers".
+    <strong>Entrée : </strong> Deux arguments. Les deux sont des entiers (int).
 </p>
 
 <p>
-    <strong>En sortie: </strong> Un "integer". 
+    <strong>Sortie : </strong> Un entier (int). 
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Exemple :</strong>
     </p>
 
 {% if interpreter.slug == "js-node" %}
@@ -31,25 +30,25 @@ mult_two(1, 0) == 0
 {% endif %}
 </div>
 
-<p><b>Commment tout celà fonctionne ?</b></p>
+<p><b>Comment ça marche ?</b></p>
 
-<p>Au départ, le code est une fonction vide (que vous allez avoir à remplir). Ta fonction doit retourner des valeurs et surtout pas les afficher à l'écran. 
+<p>Quand vous commencez à travailler sur une mission, le code initial présente une fonction vide (que vous compléterez avec votre code). Des assertions sont incluses dans le code pour vérifier que la fonction se comporte comme prévu. Assurez-vous que la fonction renvoie les valeurs demandées, elle ne les affiche pas.
 
 {% if interpreter.slug == "js-node" %}
-That is, use <a target="_blank" target="_blank" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/return">the return command</a> instead of <a target="_blank" target="_blank" href="https://developer.mozilla.org/ru/docs/Web/API/Console/log">the console.log function</a>.
+Pour cela, utilisez <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return">la commande "return"</a> au lieu de <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Console/log">la fonction "console.log()"</a>.
 {% else %}
-That is, use the return command instead of the print function. <a target="_blank" target="_blank" href="https://stackoverflow.com/questions/7129285/what-is-the-purpose-of-the-return-statement">Check this short explanation.</a>
+Pour cela, utilisez la commande "return" au lieu de la fonction "print()". <a target="_blank" target="_blank" href="https://stackoverflow.com/questions/7129285/what-is-the-purpose-of-the-return-statement">Jetez un œil à cette courte explication.</a>
 {% endif %}
 </p>
 
-<p>Tu peux vérifier ta réponse en cliquant sur le boutton "run" (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_run.png" />). CheckiO also uses several additional tests in order to check your solution when you click the “Check” button (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_check.png" />).</p>
+<p>Les assertions dans le code peuvent être utilisées pour tester votre solution en cliquant sur le bouton "Run" (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_run.png" />). CheckiO utilise aussi plusieurs tests additionnels pour vérifier votre solution quand vous cliquez sur le bouton "Check" (<img style="height: 31px;vertical-align: bottom;" src="{{MEDIA}}btn_check.png" />).</p>
 
-<p>Si ta solution ne passe pas les tests interne, le panel de droite affichera un message d'erreur en trois parties.</p>
+<p>Si la solution ne passe pas les tests internes, le panneau de droite affichera un message d'erreur contenant 3 éléments :</p>
 
 <ul>
-<li><b>Fail:</b> - Comment ta fonction a été appellée.</li>
-<li><b>Your Result:</b> - Ce qui à été retourné.</li>
-<li><b>Right Result:</b> - Ce qui est attendu.</li>
+<li><b>Fail:</b> - montre comment votre fonction a été appelée.</li>
+<li><b>Your Result:</b> - montre ce qui a été retourné.</li>
+<li><b>Right Result:</b> - montre ce qui est attendu.</li>
 </ul>
 
 <p>Pour résoudre ce challenge, la fonction vide doit être remplacée par le code suivant :</p>
@@ -67,17 +66,17 @@ def mult_two(a: int, b: int) -> int:
 </pre>
 {% endif %}
 
-<p>Clique sur le boutton "check".</p>
+<p>Essayez maintenant de cliquer sur le bouton "Check".</p>
 
 
-<p>Si ta solution passe tous les tests, des messages de félicitations apparaitront sur le panneau de droite suivi d'une suggestion pour la suite (Oui, ce n'est jamais la fin de l'histoire).</p>
+<p>Si la solution passe tous les tests avec succès, des félicitations apparaîtront sur le panneau de droite ainsi qu'une suggestion pour la suite. (Eh oui, ce n'est pas la fin de l'histoire !).</p>
 
 <ul>
-<li><b>Voir les autres solutions</b></li>
-<li><b>Publies ta solution</b></li>
-<li><b>Prochaine mission</b></li>
+<li><b>View other solutions</b> - lorsque le challenge est résolu, vous pouvez accéder aux solutions des autres joueurs qui sont répartis en plusieurs catégories.</li>
+<li><b>Publish your solution</b> - publier votre propre solution.</li>
+<li><b>Next Mission</b> - aller à la mission suivante.</li>
 </ul>
 
-<p>Je te recommande de regarder les solutions des autres avant de publier la tienne.</p>
+<p>Je vous recommande de parcourir les solutions des autres joueurs avant de publier la vôtre.</p>
 
-<p>Certaines tâches possède une liste d'indices pour t'aider à résoudre.</p>
+<p>Pour finir, certains challenges proposent une liste d'indices pour leur résolution. Puisque nous avons déjà expliqué comment résoudre ce challenge, nous ajouterons dans les indices des anecdotes intéressantes à propos de CheckiO !</p>
