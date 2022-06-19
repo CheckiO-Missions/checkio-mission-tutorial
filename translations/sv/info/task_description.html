@@ -19,15 +19,7 @@
         <strong>Exempel:</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">multTwo(2, 3) == 6
-multTwo(1, 0) == 0
-</pre>
-{% else %}
-<pre class="brush: python">mult_two(2, 3) == 6
-mult_two(1, 0) == 0
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p><b>Hur fungerar det?</b></p>
@@ -42,14 +34,6 @@ Med andra ord behöver du använda return-kommandot istället för funktionen pr
 </p>
 
 <p>Testfallen efter din funktion kan användas för att kontrollera din lösning innan du skickar in den. För att göra detta, klicka på "Run Code"-knappen. När du sedan klickar på "Check Solution"-knappen kommer CheckiO att köra ytterligare testfall för att kontrollera att din lösning är korrekt.</p>
-
-<p>Om din lösning inte klarade testfallen så kommer panelen till höger att visa ett felmeddelande innehållande följande tre punkter:</p>
-
-<ul>
-<li><b>Fail:</b> - visar hur din funktion anropades.</li>
-<li><b>Your Result:</b> - visar resultatet av din funktion.</li>
-<li><b>Right Result:</b> - visar det rätta resultatet.</li>
-</ul>
 
 <p>För att lösa den här uppgiften måste den "tomma" funktionen bytas ut mot följande:</p>
 
@@ -66,16 +50,10 @@ def mult_two(a: int, b: int) -> int:
 </pre>
 {% endif %}
 
-<p>Prova sedan att klicka på "Check"-knappen.</p>
+<p>Prova sedan att klicka på "Check Solution"-knappen.</p>
 
 
 <p>Om din lösning klarade alla testfallen kommer panelen till höger att visa en gratulation följd av förslag på vad du kan göra härnäst. (Nej, din resa slutar inte här).</p>
-
-<ul>
-<li><b>View other solutions</b> - när du har löst uppgiften kan du se hur andra spelare har löst den. Lösningarna är indelade i olika kategorier.</li>
-<li><b>Publish your solution</b> - publicera din egen lösning så att andra spelare kan se och kommentera den.</li>
-<li><b>Next Mission</b> - fortsätt till nästa uppdrag.</li>
-</ul>
 
 <p>Jag rekommenderar att du går igenom andra spelares lösningar innan du publicerar din egen.</p>
 

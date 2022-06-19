@@ -19,15 +19,7 @@
         <strong>Przykład:</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">multTwo(2, 3) == 6
-multTwo(1, 0) == 0
-</pre>
-{% else %}
-<pre class="brush: python">mult_two(2, 3) == 6
-mult_two(1, 0) == 0
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p><b>Jak to działa?:</b></p>
@@ -42,14 +34,6 @@ W tym celu używaj komendy return zamiast funkcji print. <a target="_blank" targ
 </p>
 
 <p>Możesz użyć assertów znajdujących się poniżej twojej funkcji w celu sprawdzenia swojego rozwiązania wciskając przycisk “Run Code”. CheckiO używa też kilku dodatkowych testów aby sprawdzić twoje rozwiązanie po naciśnięciu przycisku “Check Solution”.</p>
-
-<p>Jeśli rozwiązanie nie przejdzie testów wewnętrznych, panel po prawej stronie wyświetli informację o błędzie zawierającą 3 pozycje.</p>
-
-<ul>
-<li><b>Fail:</b> - jak twoja funkcja została wywołana.</li>
-<li><b>Your Result:</b> - co zwróciła.</li>
-<li><b>Right Result:</b> - co powinna zwrócić.</li>
-</ul>
 
 <p>Aby rozwiązać zadanie, “pusta” funkcja musi zostać zastąpiona następującym kodem:</p>
 
@@ -66,16 +50,10 @@ def mult_two(a: int, b: int) -> int:
 </pre>
 {% endif %}
 
-<p>Spróbuj teraz nacisnąć przycisk “Check”.</p>
+<p>Spróbuj teraz nacisnąć przycisk “Check Solution”.</p>
 
 
 <p>Jeśli rozwiązanie przejdzie wszystkie testy, na prawym panelu powinny pojawić się gratulacje wraz z sugestią dotyczącą dalszego działania. (Tak, to nie koniec historii).</p>
-
-<ul>
-<li><b>View other solutions </b> - pokaż inne rozwiązania. Po rozwiązaniu zadania możesz uzyskać dostęp do podzielonych na kategorie rozwiązań innych użytkowników.</li>
-<li><b>Publish your solution </b> - udostępnij swoje rozwiązanie.</li>
-<li><b>Next Mission</b> - idź do kolejnej misji.</li>
-</ul>
 
 <p>Przed opublikowaniem własnego rozwiązania polecamy zapoznanie się z rozwiązaniami innych użytkowników.</p>
 

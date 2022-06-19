@@ -19,15 +19,7 @@
         <strong>Ejemplo:</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">multTwo(2, 3) == 6
-multTwo(1, 0) == 0
-</pre>
-{% else %}
-<pre class="brush: python">mult_two(2, 3) == 6
-mult_two(1, 0) == 0
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p><b>¿Cómo funciona?:</b></p>
@@ -42,14 +34,6 @@ Para realizar esto, usa el comando 'return' en lugar de la función 'print'. <a 
 </p>
 
 <p>Las aserciones en el código pueden ser usadas para chequear tu solución al presionar el botón “Run Code”. CheckiO también ejecuta varios test adicionales para chequear tu solución cuando haces clic en el botón “Check Solution”.</p>
-
-<p>Si la solución que escribiste no pasa los tests internos, el panel derecho mostrará un mensaje de error compuesto por 3 ítems:</p>
-
-<ul>
-<li><b>Your Result:</b> - Muestra lo que retornó.</li>
-<li><b>Right Result:</b> - Muestra lo que debió haber retornado.</li>
-<li><b>Fail:</b> - Muestra cómo fue invocada tu función.</li>
-</ul>
 
 <p>Para resolver la actividad, el contenido de la función vacía debe ser reemplazado con el siguiente código:</p>
 
@@ -66,31 +50,11 @@ def mult_two(a: int, b: int) -> int:
 </pre>
 {% endif %}
 
-<p>Ahora intenta hacer clic en el botón “Check”. </p>
+<p>Ahora intenta hacer clic en el botón “Check Solution”. </p>
 
-<p>Si la solución pasa todos los tests, deberán aparecer las felicitaciones en el panel derecho, junto a las siguientes sugerencias (sí, este no es el final de la historia):</p>
+<p>Si la solución pasa todos los tests, deberán aparecer las felicitaciones en el panel derecho, junto a las siguientes sugerencias (sí, este no es el final de la historia)</p>
 
-<ul>
-<li><b>View other solutions</b> - Una vez que la actividad ha sido completada, podrás acceder a la solución realizada por otros jugadores, las cuales están divididas por categorías.</li>
-<li><b>Publish your solution</b> - Publica tu solución personal.</li>
-<li><b>Next Mission</b> - Avanza a la siguiente misión.</li>
-</ul>
 
 <p>Es recomendable revisar las soluciones de otros jugadores antes de publicar tu solución personal.</p>
 
 <p>Por último, pero no menos importante, algunas actividades tienen al final una lista de pistas de resolución, pero como en esta ya hemos descrito cómo resolverla, en su lugar, agregaremos datos interesantes acerca de CheckiO.</p>
-
-
-    © 2021 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About

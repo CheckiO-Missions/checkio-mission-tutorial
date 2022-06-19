@@ -19,15 +19,7 @@
         <strong>Exemple :</strong>
     </p>
 
-{% if interpreter.slug == "js-node" %}
-<pre class="brush: javascript">multTwo(2, 3) == 6
-multTwo(1, 0) == 0
-</pre>
-{% else %}
-<pre class="brush: python">mult_two(2, 3) == 6
-mult_two(1, 0) == 0
-</pre>
-{% endif %}
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 <p><b>Comment ça marche ?</b></p>
@@ -42,14 +34,6 @@ Pour cela, utilisez la commande "return" au lieu de la fonction "print()". <a ta
 </p>
 
 <p>Les assertions dans le code peuvent être utilisées pour tester votre solution en cliquant sur le bouton "Run Code". CheckiO utilise aussi plusieurs tests additionnels pour vérifier votre solution quand vous cliquez sur le bouton "Check Solution".</p>
-
-<p>Si la solution ne passe pas les tests internes, le panneau de droite affichera un message d'erreur contenant 3 éléments :</p>
-
-<ul>
-<li><b>Fail:</b> - montre comment votre fonction a été appelée.</li>
-<li><b>Your Result:</b> - montre ce qui a été retourné.</li>
-<li><b>Right Result:</b> - montre ce qui est attendu.</li>
-</ul>
 
 <p>Pour résoudre ce challenge, la fonction vide doit être remplacée par le code suivant :</p>
 
@@ -66,16 +50,10 @@ def mult_two(a: int, b: int) -> int:
 </pre>
 {% endif %}
 
-<p>Essayez maintenant de cliquer sur le bouton "Check".</p>
+<p>Essayez maintenant de cliquer sur le bouton "Check Solution".</p>
 
 
 <p>Si la solution passe tous les tests avec succès, des félicitations apparaîtront sur le panneau de droite ainsi qu'une suggestion pour la suite. (Eh oui, ce n'est pas la fin de l'histoire !).</p>
-
-<ul>
-<li><b>View other solutions</b> - lorsque le challenge est résolu, vous pouvez accéder aux solutions des autres joueurs qui sont répartis en plusieurs catégories.</li>
-<li><b>Publish your solution</b> - publier votre propre solution.</li>
-<li><b>Next Mission</b> - aller à la mission suivante.</li>
-</ul>
 
 <p>Je vous recommande de parcourir les solutions des autres joueurs avant de publier la vôtre.</p>
 
