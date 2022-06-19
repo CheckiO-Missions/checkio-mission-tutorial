@@ -1,0 +1,25 @@
+{% comment %}New initial code template{% endcomment %}
+{% block env %}import assert from "assert";{% endblock env %}
+
+{% block start %}
+function multTwo(a: number, b: number): number {
+    // your code here
+    return 0;
+}
+{% endblock start %}
+
+{% block example %}
+console.log('Example:');
+console.log(multTwo(3, 2));
+{% endblock %}
+
+// These "asserts" are used for self-checking
+{% block tests %}
+{% for t in tests %}
+assert.equal({% block call %}multTwo({{t.input.0}}, {{t.input.1}})
+{% endblock %}, {% block result %}{{t.answer|j}}{% endblock %});{% endfor %}
+{% endblock %}
+
+{% block final %}
+console.log("Coding complete? Click 'Check' to earn cool rewards!");
+{% endblock final %}
