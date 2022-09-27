@@ -1,74 +1,201 @@
 <body data-author="oduvan">
 <div class="question-answer">
     <div class="question">
-        Please help me to start using CheckiO
+        I don’t know how to solve that mission.
     </div>
     <div class="answer">
-        <p><a href="https://py.checkio.org/blog/checkio-intro-full-version-from-basic-to-advance-u/">This short video</a> explains to you all of the available features on CheckiO.</p>
+        <p>Every solution on starts with an empty function</p>
 
-        <p>You can also check our <a href="https://py.checkio.org/forum/post/3271/faq/">FAQ section of forum</a>.</p>
+        <pre class="brush: python">
+def mult_two(a: int, b: int) -> int:
+    # your code here
+    return None
+        </pre>
+
+        <p>… and a set of asserts tests your function when you run the code.</p>
+
+        <pre class="brush: python">
+assert mult_two(3, 2) == 6
+assert mult_two(0, 1) == 0
+        </pre>
+
+        <p>Your goal is to fill an empty function with the correct solution.</p>
+
     </div>
 </div>
-<div class="question-answer">
-    <div class="question">
-        Can I play with friends?
-    </div>
-    <div class="answer">
-        <p>Yes, and it’s always better to do with friends. Starting at the 3rd level there is an Activity section, which resembles a news feed in social networks (Every user’s profile has “follow” button). On the Activity page you can follow your friends and see their new solutions and comments. In addition to this the solutions in leaderboard you can filter by solutions that are published by your friends or that your friends like.</p>
-    </div>
-</div>
 
-<div class="question-answer">
-    <div class="question">
-        If I have a group of students, how can I use CheckiO?
-    </div>
-    <div class="answer">
-        <p>Analyzing and working with groups of students are a separate, large part of CheckiO. You can get familiar with it by going through this <a href="https://checkio.org/pages/group/">series of articles</a>.</p>
-
-        <p>As a class creator, you can change missions order and even create your missions for your class.</p>
-
-        <p><a href="/class/demo/">Check out the demo class</a> to see how different ClassRoom analytics tools work.</p>
-    </div>
-</div>
 
 <div class="question-answer">
     <div class="question">
-        BTW! What else opens on other levels?
+        What is a function? Sounds a bit confusing.
     </div>
     <div class="answer">
-        <p>A lot of different things and features. We’re trying not to overwhelm you with everything at once, and are showing more and more as you proceed in the game. Mission creation by other users, Quests, Random Review by Email, the ability to put more than one vote under the solution you like. You can read more in <a href="/blog/levels/">this article</a>.</p>
+        <p>Here is a <a target="_blank" href="https://www.freecodecamp.org/news/python-functions-define-and-call-a-function/">very good and short article</a> that explains how functions work in Python.</p>
+
     </div>
 </div>
+
 
 <div class="question-answer">
     <div class="question">
-        I don’t quite like using the in-browser code editor. Does CheckiO have any alternatives?
+        Can you explain functions using this particular task?
     </div>
     <div class="answer">
-        <p>Yes. We have a CheckiO Console Client for Linux, Mac and Windows. You can also install a browser plugin (Chrome or FireFox) in conjunction with it to synchronize the code editor with files on a local disk. You can find out more in <a href="/blog/new-tool-checkio-client/">this article</a>.</p>
+        <p>With the big pleasure. This is why we have hints on CheckiO</p>
+
+        <p>Imagine you need to multiply two numbers and print(output) the result so you can see it in the console. For example, 5 and 6.</p>
+
+        <pre class="brush: python">
+print(5*6)
+        </pre>
+
+        <div class="output"><p>Output:</p>
+        <pre>
+30
+        </pre></div>
+
+        <p>Now instead of 5 and 6, we can use variables. For what? You will see in the further examples.</p>
+        <pre class="brush: python">
+a = 5
+b = 6
+print(a*b)
+        </pre>
+
+        <div class="output"><p>Output:</p>
+        <pre>
+30
+        </pre></div>
+
+        <p>You can change variable a, run the script again, and see the different result</p>
+        <pre class="brush: python">
+a = 6
+b = 6
+print(a*b)
+        </pre>
+
+        <div class="output"><p>Output:</p>
+        <pre>
+36
+        </pre></div>
+
+        <p>Or you can copy your code twice, change variables and see the result of two multiplications</p>
+        <pre class="brush: python">
+a = 5
+b = 6
+print(a*b)
+
+
+a = 6
+b = 6
+print(a*b)
+        </pre>
+
+        <div class="output"><p>Output:</p>
+        <pre>
+30
+36
+        </pre></div>
+
+        <p>Now I can show you how the function can simplify the above code.</p>
+
+        <pre class="brush: python">
+def mult_two(a, b):
+    return a*b
+
+print(mult_two(5, 6))
+print(mult_two(6, 6))
+        </pre>
+
+        <div class="output"><p>Output:</p>
+        <pre>
+30
+36
+        </pre></div>
+
+        <p>As you can see, function mult_two now holds all of the logic, and you only change the arguments to see different results.</p>
+
+
     </div>
 </div>
+
 
 <div class="question-answer">
     <div class="question">
-        You’ve mentioned the possibility of creating a mission, didn’t you?
+        Awesome. Thank you, but can you please explain the structure of the function in more detail so I can freely use it in the other CheckiO missions
     </div>
     <div class="answer">
-        <p>Yes, starting at the 9th level CheckiO users can create missions themselves and share them with the community for review. <a href="/blog/once-again-you-can-create-missions-on-checkio/">This article</a> in detail will describe the process of mission creation. But even before that you can always help by improving the already existing  missions, adding tips, translations, correcting typos. You can also read about this in a <a href="/blog/how-to-improve-checkio-missions/">separate article</a>.</p>
+        <p>Of course. Here is the function once again:</p>
+
+        <pre class="brush: python">
+def mult_two(a, b):
+    return a*b
+        </pre>
+
+        <p>Always starts with <b style="font-family: monospace;">def</b></p>
+
+        <p>The name of the function <b style="font-family: monospace;">mult_two</b> - you will use the name to call the function in future</p>
+
+        <p>Two arguments <b style="font-family: monospace;">(a, b)</b> - those are variables that will get their values when the function is called. For example, when we call the function <b style="font-family: monospace;">mult_two(5, 6)</b> - inside the function, we set variable a to 5 and variable b to 6.</p>
+
+        <p>You can also see function definitions with type hints.</p>
+
+        <pre class="brush: python">
+def mult_two(a: int, b: int) -> int:
+    return a*b
+        </pre>
+
+        <p>Don’t be confused by <b style="font-family: monospace;">: int</b> and <b style="font-family: monospace;">-> int</b>. They explain to the user (someone who reads the code) the expected type of arguments and the type of the result of the function call. But it is ok to ignore those for now.</p>
+
+        <p>Now the block of the function that starts with four spaces and <b style="font-family: monospace;">return</b> says what should be the result of the function calls <b style="font-family: monospace;">    return a*b</b></p>
+
+        <p>In our example <b style="font-family: monospace;">print(mult_two(5, 6))</b> - the result of the multiplication of two values 5 and 6 will be returned and use ad the first argument for the function <b style="font-family: monospace;">print</b></p>
+
+        <p>If you want your function to have more than one line of code in it - all of the lines should have the first 4 spaces. For example, lets use one more variable c, where we put the result of the multiplication and return the result</p>
+
+        <pre class="brush: python">
+def mult_two(a, b):
+    c = a*b
+    return c
+        </pre>
+
+        <p>More about python basic sintax and block structure you can read in <a target="_blank" href="https://subscription.packtpub.com/book/programming/9781787283695/1/ch01lvl1sec02/python-basic-syntax-and-block-structure">this article</a></p>
 
     </div>
 </div>
+
+
 <div class="question-answer">
     <div class="question">
-        Is the game free?
+        Ok. Thank you, now it is clear enough. But when I have a correct function, what should I do next?
     </div>
     <div class="answer">
-        <p>Yes, you can play the game for free. But there are some limitations to free accounts. Some missions on the islands can be blocked. Also, the access to the other users’ solutions leaderboard may require some time to wait. Still, meanwhile, you can use Random Review.</p>
+        <p>On top of the code editor, you have two buttons, “run code” and “check solution”. </p>
 
-        <p>You can <a href="/purchases/become-awesome/">buy an Awesome account</a> at any time. We have a monthly, semi-annual and annual payment plans for you. This will help us develop this and other coding games we’re working on.</p>
+        <p>When you hit the first one - it runs the code from code editor. When you use “check solution” - the system checks your function and shows the “congratulations” panel when it is working as expected.</p>
+
+        <p>When something doesn’t work as expected - the panel will show you the call of the function for which is return the wrong value</p>
 
     </div>
 </div>
 
 
+<div class="question-answer">
+    <div class="question">
+        What solving missions give me on CheckiO?
+    </div>
+    <div class="answer">
+        <p>After solving missions on CheckiO, you can see solutions of other users, more functionality will be opened as your level is growing, more islands will be opened and so on and so on. We have a <a target="_blank" href="https://py.checkio.org/blog/checkio-intro-full-version-from-basic-to-advance-u/">full demo video that explains all of the benefits and how to get maximum out of using CheckiO</a>. (by the way, the video also covers solving the very first missions and explains how the asserts works, which we haven’t covered in the hints)</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Cool. Thank you.
+    </div>
+    <div class="answer">
+        <p>Have a great coding.</p>
+    </div>
+</div>
 </body>
