@@ -4,15 +4,15 @@
         I don’t know how to solve that mission.
     </div>
     <div class="answer">
-        <p>Every solution on starts with an empty function</p>
+        <p>Every solution starts with an empty function</p>
 
         <pre class="brush: python">
 def mult_two(a: int, b: int) -> int:
     # your code here
-    return None
+    return 0
         </pre>
 
-        <p>… and a set of asserts tests your function when you run the code.</p>
+        <p>… and a set of <b class="code">assert</b>, which tests your function when you run the code.</p>
 
         <pre class="brush: python">
 assert mult_two(3, 2) == 6
@@ -131,11 +131,11 @@ def mult_two(a, b):
     return a*b
         </pre>
 
-        <p>Always starts with <b style="font-family: monospace;">def</b></p>
+        <p>Always starts with <b class="code">def</b></p>
 
-        <p>The name of the function <b style="font-family: monospace;">mult_two</b> - you will use the name to call the function in future</p>
+        <p>The name of the function <b class="code">mult_two</b> - you will use the name to call the function in future</p>
 
-        <p>Two arguments <b style="font-family: monospace;">(a, b)</b> - those are variables that will get their values when the function is called. For example, when we call the function <b style="font-family: monospace;">mult_two(5, 6)</b> - inside the function, we set variable a to 5 and variable b to 6.</p>
+        <p>Two arguments <b class="code">(a, b)</b> - those are variables that will get their values when the function is called. For example, when we call the function <b class="code">mult_two(5, 6)</b> - inside the function, we set variable a to 5 and variable b to 6.</p>
 
         <p>You can also see function definitions with type hints.</p>
 
@@ -144,11 +144,11 @@ def mult_two(a: int, b: int) -> int:
     return a*b
         </pre>
 
-        <p>Don’t be confused by <b style="font-family: monospace;">: int</b> and <b style="font-family: monospace;">-> int</b>. They explain to the user (someone who reads the code) the expected type of arguments and the type of the result of the function call. But it is ok to ignore those for now.</p>
+        <p>Don’t be confused by <b class="code">: int</b> and <b class="code">-> int</b>. They explain to the user (someone who reads the code) the expected type of arguments and the type of the result of the function call. But it is ok to ignore those for now.</p>
 
-        <p>Now the block of the function that starts with four spaces and <b style="font-family: monospace;">return</b> says what should be the result of the function calls <b style="font-family: monospace;">    return a*b</b></p>
+        <p>Now the block of the function that starts with four spaces and <b class="code">return</b> says what should be the result of the function calls <b class="code">    return a*b</b></p>
 
-        <p>In our example <b style="font-family: monospace;">print(mult_two(5, 6))</b> - the result of the multiplication of two values 5 and 6 will be returned and use ad the first argument for the function <b style="font-family: monospace;">print</b></p>
+        <p>In our example <b class="code">print(mult_two(5, 6))</b> - the result of the multiplication of two values 5 and 6 will be returned and use ad the first argument for the function <b class="code">print</b></p>
 
         <p>If you want your function to have more than one line of code in it - all of the lines should have the first 4 spaces. For example, lets use one more variable c, where we put the result of the multiplication and return the result</p>
 
@@ -158,7 +158,7 @@ def mult_two(a, b):
     return c
         </pre>
 
-        <p>More about python basic sintax and block structure you can read in <a target="_blank" href="https://subscription.packtpub.com/book/programming/9781787283695/1/ch01lvl1sec02/python-basic-syntax-and-block-structure">this article</a></p>
+        <p>More about python basic syntax and block structure you can read in <a target="_blank" href="https://subscription.packtpub.com/book/programming/9781787283695/1/ch01lvl1sec02/python-basic-syntax-and-block-structure">this article</a></p>
 
     </div>
 </div>
@@ -169,9 +169,9 @@ def mult_two(a, b):
         Ok. Thank you, now it is clear enough. But when I have a correct function, what should I do next?
     </div>
     <div class="answer">
-        <p>On top of the code editor, you have two buttons, “run code” and “check solution”. </p>
+        <p>On top of the code editor, you have two buttons, “Run Code” and “Check Solution”. </p>
 
-        <p>When you hit the first one - it runs the code from code editor. When you use “check solution” - the system checks your function and shows the “congratulations” panel when it is working as expected.</p>
+        <p>When you hit the first one - it runs the code from code editor. When you use “Check Solution” - the server checks your function with the set of tests and shows the “congratulations” panel when it is working as expected.</p>
 
         <p>When something doesn’t work as expected - the panel will show you the call of the function for which is return the wrong value</p>
 
@@ -181,7 +181,7 @@ def mult_two(a, b):
 
 <div class="question-answer">
     <div class="question">
-        What solving missions give me on CheckiO?
+        What solving missions gives me on CheckiO?
     </div>
     <div class="answer">
         <p>After solving missions on CheckiO, you can see solutions of other users, more functionality will be opened as your level is growing, more islands will be opened and so on and so on. We have a <a target="_blank" href="https://py.checkio.org/blog/checkio-intro-full-version-from-basic-to-advance-u/">full demo video that explains all of the benefits and how to get maximum out of using CheckiO</a>. (by the way, the video also covers solving the very first missions and explains how the asserts works, which we haven’t covered in the hints)</p>
