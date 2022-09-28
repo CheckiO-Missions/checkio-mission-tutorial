@@ -18,17 +18,4 @@
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
-<p><b>どのように動作するのか:</b></p>
-
-<p>あなたが問題を解き始めた時、最初のコードはいつも「空っぽ」の関数 (この関数の中身を、提出する回答として埋めていきます) と、その下にある検証用のコードとで構成されています。気を付けるべきことは、関数は値を返すべきなのであって、それを画面に出力すべきではないということです。
-
-{% if interpreter.slug == "js-node" %}
-つまり、<a target="_blank" href="https://developer.mozilla.org/ja/docs/Web/API/Console/log">console.log 関数</a>を使うのではなく、<a target="_blank" href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/return">return 文</a>を使う必要があります。
-{% else %}
-つまり、<a target="_blank" href="https://docs.python.org/ja/3/library/functions.html#print">print 関数</a>を使うのではなく、<a target="_blank" href="https://docs.python.org/ja/3/reference/simple_stmts.html#the-return-statement">return 文</a>を使う必要があります。<a target="_blank" href="https://stackoverflow.com/questions/7129285/what-is-the-purpose-of-the-return-statement">この Stack Overflow の解説 (英語)</a>を参照してください。
-{% endif %}
-</p>
-
-<p>あなたの関数の後にある検証用のコードは、「Run Code」ボタン を押すことで、まずセルフチェックを行うために利用できます。さらに、 CheckiO はいくつかの追加のテストをシステム内部に持っていて、「Check Solution」ボタン を押すことで、あなたの関数がそれらのテストに合格できるかを確認します。</p>
-
-<p>最後に大事なことですが、いくつかのミッションは末尾に解くためのヒントを持っている場合があります。ただ、このミッションでは既に解き方を説明してしまいましたから、ここでは CheckiO に関するいくつかの興味深い事実をヒントとして掲載することにします。</p>
+<p>A series of hints below will help you to understand how to solve the mission. Start the series by clicking on "I don’t know how to solve that mission."</p>

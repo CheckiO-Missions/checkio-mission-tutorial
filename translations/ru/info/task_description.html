@@ -18,19 +18,4 @@
 
 <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 
-<p><b>Как это работает?:</b></p>
-
-<p>Начальный код твоего решения будет содержать “пустую” функцию (которую нужно наполнить) и набор тестов (asserts) под этой функцией. Обрати внимание, что твоя функция должна возвращать результат, а не выводить его.
-
-{% if interpreter.slug == "js-node" %}
-Это значит использовать <a target="_blank" target="_blank" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/return">команду return</a> вместо <a target="_blank" target="_blank" href="https://developer.mozilla.org/ru/docs/Web/API/Console/log">функции console.log</a>.
-{% else %}
-Это значит использовать команду return вместо функции print. <a target="_blank" target="_blank" href="https://stackoverflow.com/questions/7129285/what-is-the-purpose-of-the-return-statement">Это небольшое объяснение разницы.</a>
-{% endif %}
-</p>
-
-<p>Asserts которые идут после объявления функции можно использоваться для того, чтобы проверить себя нажатием кнопки Run Code. CheckiO также будет использовать несколько дополнительных тестов для того чтобы проверить решение когда ты нажмешь кнопку Check Solution.</p>
-
-<p>Если решение не прошло тестирование, то на правой панели будет выведено сообщение об ошибке</p>
-
-<p>И последнее, некоторые задачи в конце имеют список подсказок для решения. Но т.к. в этой задаче мы уже рассказали как решать, то в хинтах мы добавим несколько интересных фактов про CheckiO</p>
+<p>A series of hints below will help you to understand how to solve the mission. Start the series by clicking on "I don’t know how to solve that mission."</p>
