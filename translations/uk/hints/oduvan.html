@@ -23,7 +23,8 @@ assert mult_two(0, 1) == 0
         Що таке функція? Звучить трохи заплутано.
     </div>
     <div class="answer">
-        <p>Ось <a target="_blank" href="https://www.freecodecamp.org/news/python-functions-define-and-call-a-function/">дуже хороша і коротка стаття</a>, яка пояснює, як працюють функції в Python.</p>
+        <p>Ось <a target="_blank" href="https://www.freecodecamp.org/news/python-functions-define-and-call-a-function/">
+            дуже хороша і коротка стаття</a>, яка пояснює, як працюють функції в Python.</p>
     </div>
 </div>
 <div class="question-answer">
@@ -33,7 +34,7 @@ assert mult_two(0, 1) == 0
     <div class="answer">
         <p>З великим задоволенням! Саме тому ми маємо підказки на CheckiO.</p>
         <p>Уяви, що тобі потрібно перемножити два числа і надрукувати (вивести) результат
-            так, щоб побачити його в консолі. Наприклад, 5 і 6.</p>
+            так, щоб побачити його в консолі. Наприклад, <b class="code">5</b> і <b class="code">6</b>.</p>
         <pre class="brush: python">
 print(5*6)
         </pre>
@@ -43,7 +44,7 @@ print(5*6)
 30
             </pre>
         </div>
-        <p>Тепер замість 5 і 6, ми можемо використати змінні. Для чого? Ти побачиш це у наступних прикладах.</p>
+        <p>Тепер замість <b class="code">5</b> і <b class="code">6</b>, ми можемо використати змінні. Для чого? Ти побачиш це у наступних прикладах.</p>
         <pre class="brush: python">
 a = 5
 b = 6
@@ -119,14 +120,18 @@ def mult_two(a, b):
     return a*b
         </pre>
         <p>Завжди починай з <b class="code">def</b>.</p>
+
         <p>Далі йде ім'я функції <b class="code">mult_two</b>
             - надалі ти будеш використовувати це ім'я для виклику функції.</p>
+
         <p>Два аргументи <b class="code">(a, b)</b> - це змінні,
             які набувають значень під час виклику функції. Наприклад, коли ти
             викликаєш функцію <b class="code">mult_two(5, 6)</b>
             - всередині функції змінній <b class="code">a</b>
-            присвоюється значення 5 і змінній <b class="code">b</b> - 6.</p>
+            присвоюється значення <b class="code">5</b> і змінній <b class="code">b</b> - <b class="code">6</b>.</p>
+            
         <p>Також, ти можеш бачити розширений запис виразу функції:</p>
+
         <pre class="brush: python">
 def mult_two(a: int, b: int) -> int:
 
@@ -162,11 +167,11 @@ def mult_two(a, b):
 
         <p><center><img src="{{MEDIA}}task_solved.png" style="width: 100%; max-width: 400px;" /></center></p>
 
-        <p>Якщо щось працює неочікувано,  панель покаже виклик функції, для якого повернуто не вірне значення.</p>
+        <p>Якщо щось працює неочікувано, панель покаже виклик функції, для якого повернуто не вірне значення.</p>
 
         <p><center><img src="{{MEDIA}}py_check_failed.png" style="width: 100%; max-width: 900px;" /></center></p>
 
-        <p>або коли помилка в <b class="code">assert</b></p>
+        <p>або коли помилка в <b class="code">assert</b>.</p>
 
         <p><center><img src="{{MEDIA}}py_run_failed.png" style="width: 100%; max-width: 260px;" /></center></p>
     </div>
