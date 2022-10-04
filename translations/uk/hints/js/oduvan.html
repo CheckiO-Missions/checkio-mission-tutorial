@@ -1,0 +1,235 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        Я не розумію, як розв'язати цю місію.
+    </div>
+    <div class="answer">
+        <p>Кожен розв'язок розпочинається із порожньої функції …</p>
+
+        <pre class="brush: javascript">
+function multTwo(a: number, b: number): number {
+    // your code here
+    return 0;
+}
+        </pre>
+
+        <p>… і ряду тверджень <b class="code">assert</b>, які перевіряються, коли ти запускаєш код.</p>
+
+        <pre class="brush: javascript">
+assert.equal(multTwo(3, 2), 6);
+assert.equal(multTwo(0, 1), 0);
+        </pre>
+
+        <p>Твоєю метою є заповнити порожню функцію правильним розв'язком.</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Що таке функція? Звучить трохи заплутано.
+    </div>
+    <div class="answer">
+        <p>Ось <a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">
+            дуже хороша і коротка стаття</a>, яка пояснює, як працюють функції в JavaScript.</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Чи можеш ти пояснити функції, використовуючи конкретно цю місію?
+    </div>
+    <div class="answer">
+        <p>З великим задоволенням! Саме тому ми маємо підказки на CheckiO.</p>
+
+        <p>Уяви, що тобі потрібно перемножити два числа і надрукувати (вивести) результат
+            так, щоб побачити його в консолі. Наприклад, <b class="code">5</b> і <b class="code">6</b>.</p>
+
+        <pre class="brush: javascript">
+console.log(5*6);
+        </pre>
+
+        <div class="output"><p>Вивід:</p>
+        <pre>
+30
+        </pre></div>
+
+        <p>Тепер замість <b class="code">5</b> і <b class="code">6</b>, ми можемо використати змінні. Для чого? Ти побачиш це у наступних прикладах.</p>
+        <pre class="brush: javascript">
+let a = 5;
+let b = 6;
+console.log(a*b);
+        </pre>
+
+        <div class="output">
+            <p>Вивід:</p>
+        <pre>
+30
+        </pre>
+        </div>
+        <p>Ти можеш змінити значення змінної <b class="code">a</b>,
+            запустити сценарій знову і побачити інший результат.</p>
+        <pre class="brush: javascript">
+let a = 6;
+let b = 6;
+console.log(a*b);
+        </pre>
+
+        <div class="output"><p>Вивід:</p>
+        <pre>
+36
+        </pre></div>
+
+        <p>Або ти можеш здублювати свій код (без <b class="code">let</b> у копії), змінити значення змінних і побачити результати двох множень.</p>
+        <pre class="brush: javascript">
+let a = 5;
+let b = 6;
+console.log(a*b);
+
+
+a = 6;
+b = 6;
+console.log(a*b);
+        </pre>
+
+        <div class="output"><p>Вивід:</p>
+        <pre>
+30
+36
+        </pre></div>
+
+        <p>Тепер я можу показати тобі, як використання функції спрощує такі операції.</p>
+
+        <pre class="brush: javascript">
+function multTwo(a, b) {
+    
+    return a*b;
+}
+
+console.log(multTwo(5, 6));
+console.log(multTwo(6, 6));
+        </pre>
+
+        <div class="output"><p>Вивід:</p>
+        <pre>
+30
+36
+        </pre></div>
+
+        <p>Як ти бачиш, функція <b class="code">multTwo</b> тепер містить всю логіку рішення і ти
+            лише змінюєш значення аргументів, щоб отримати інший результат.</p>
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Приголомшливо! Дякую, та чи можеш ти будь ласка пояснити структуру функції
+        більш детально, щоб я міг вільно використовувати це в інших місіях CheckiO?
+    </div>
+    <div class="answer">
+        <p>Звісно! Ось запис функції ще раз:</p>
+
+        <pre class="brush: javascript">
+function multTwo(a, b) {
+
+    return a*b;
+}
+        </pre>
+
+        <p>Завжди починай з <b class="code">function</b>.</p>
+
+        <p>Далі йде ім'я функції <b class="code">multTwo</b> - надалі ти будеш використовувати це ім'я для виклику функції.</p>
+
+        <p>Два аргументи <b class="code">(a, b)</b> - це змінні,
+            які набувають значень під час виклику функції. Наприклад, коли ти
+            викликаєш функцію 
+            <b class="code">multTwo(5, 6)</b> - всередині функції змінній <b class="code">a</b>
+            присвоюється значення <b class="code">5</b> і змінній <b class="code">b</b> - <b class="code">6</b>.</p>
+
+        <p>Також, ти можеш бачити розширений запис виразу функції:</p>
+
+        <pre class="brush: javascript">
+function multTwo(a: number, b: number): number {
+
+    return a * b;
+}
+        </pre>
+
+        <p>Не лякайся через <b class="code">: number</b>.
+            Вони пояснюють користувачу (тому, хто читатиме код) очікуваний тип аргументу
+            і тип результату виклику функції. Їх використання не обов'язкове, але корисне.</p>
+
+        <p>далі блок функції всередині <b class="code">{</b> і <b class="code">}</b> і з <b class="code">return</b> який показує що повинно бути результатом виклику функції: <b class="code">    return a*b</b>.</p>
+
+        <p>В нашому прикладі <b class="code">console.log(multTwo(5, 6))</b> - результат множення двох значень <b class="code">5</b> і <b class="code">6</b> буде повернений і використаний як аргумент для функції <b class="code">console.log()</b>.</p>
+
+        <p>Твоя функція може мати більше одного рядка коду. Наприклад, введемо ще одну змінну <b class="code">c</b>, якій ми присвоїмо результат множення і повернемо цю змінну.</p>
+
+        <pre class="brush: javascript">
+function multTwo(a, b) {
+
+    let c = a*b;
+
+    return c;
+}
+        </pre>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Зрозуміло. Дякую тобі, тепер все досить ясно. Але коли я написав коректну функцію, що мені робити далі?
+    </div>
+    <div class="answer">
+        <p>Вгорі редактора коду є дві кнопки - “Run Code” і “Check Solution”.</p>
+
+        <p><center><img src="{{MEDIA}}run_check_panel.png" style="width: 100%;" /></center></p>
+
+        <p>Коли ти натиснеш першу, вона запустить код із редактора (включно із <b class="code">assert</b>).
+            Коли натиснеш “Check Solution” - система перевірить твою функції рядом тестів і покаже панель вітання “congratulations”, якщо все працює як очікувалось.</p>
+
+        <p><center><img src="{{MEDIA}}task_solved.png" style="width: 100%; max-width: 400px;" /></center></p>
+
+        <p>Якщо щось працює неочікувано, панель покаже виклик функції, для якого повернуто не вірне значення.</p>
+
+        <p><center><img src="{{MEDIA}}js_check_failed.png" style="width: 100%; max-width: 900px;" /></center></p>
+
+        <p>або коли помилка в <b class="code">assert</b>.</p>
+
+        <p><center><img src="{{MEDIA}}js_run_failed.png" style="width: 100%; max-width: 260px;" /></center></p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Що дає мені розв'язування місій на CheckiO?
+    </div>
+    <div class="answer">
+        <p>Розв'язуючи місії на CheckiO, ти отримаєш доступ до розв'язків інших користувачів,
+            більше функціональності буде відкрито при зростанні рівня,
+            більше островів і ще, і ще. Ми маємо
+            <a target="_blank" href="https://py.checkio.org/blog/checkio-intro-full-version-from-basic-to-advance-u/">
+                ґрунтовне відео (версія Python), що пояснює всі переваги і як отримати максимум від використання CheckiO</a>
+            (до речі, відео також показує розв'язок декількох початкових місій і пояснює, як працюють <b class="code">assert</b>-и, що не відображено в цих підказках).</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Круто! Дякую.
+    </div>
+    <div class="answer">
+        <p>Приємного написання коду!</p>
+    </div>
+</div>
+</body>
