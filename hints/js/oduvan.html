@@ -1,10 +1,10 @@
 <body data-author="oduvan">
 <div class="question-answer">
     <div class="question">
-        I don’t know how to solve that mission.
+        I don’t know how to solve this mission.
     </div>
     <div class="answer">
-        <p>Every solution on starts with an empty function</p>
+        <p>Every solution starts with an empty function …</p>
 
         <pre class="brush: javascript">
 function multTwo(a: number, b: number): number {
@@ -13,7 +13,7 @@ function multTwo(a: number, b: number): number {
 }
         </pre>
 
-        <p>… and a set of asserts tests your function when you run the code.</p>
+        <p>… and a set of <b class="code">assert</b>, which tests your function when you run the code.</p>
 
         <pre class="brush: javascript">
 assert.equal(multTwo(3, 2), 6);
@@ -31,7 +31,8 @@ assert.equal(multTwo(0, 1), 0);
         What is a function? Sounds a bit confusing.
     </div>
     <div class="answer">
-        <p>Here is a <a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">very good and short article</a> that explains how functions work in JavaScript.</p>
+        <p>Here is a <a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">
+            very good and short article</a> that explains how functions work in JavaScript.</p>
 
     </div>
 </div>
@@ -42,9 +43,9 @@ assert.equal(multTwo(0, 1), 0);
         Can you explain functions using this particular task?
     </div>
     <div class="answer">
-        <p>With the big pleasure. This is why we have hints on CheckiO</p>
+        <p>With the big pleasure. This is why we have hints on CheckiO!</p>
 
-        <p>Imagine you need to multiply two numbers and print(output) the result so you can see it in the console. For example, 5 and 6.</p>
+        <p>Imagine you need to multiply two numbers and print(output) the result so you can see it in the console. For example, <b class="code">5</b> and <b class="code">6</b>.</p>
 
         <pre class="brush: javascript">
 console.log(5*6);
@@ -55,7 +56,7 @@ console.log(5*6);
 30
         </pre></div>
 
-        <p>Now instead of 5 and 6, we can use variables. For what? You will see in the further examples.</p>
+        <p>Now instead of <b class="code">5</b> and <b class="code">6</b>, we can use variables. For what? You will see in the further examples.</p>
         <pre class="brush: javascript">
 let a = 5;
 let b = 6;
@@ -67,7 +68,7 @@ console.log(a*b);
 30
         </pre></div>
 
-        <p>You can change variable a, run the script again, and see the different result</p>
+        <p>You can change variable <b class="code">a</b>, run the script again, and see the different result</p>
         <pre class="brush: javascript">
 let a = 6;
 let b = 6;
@@ -79,7 +80,7 @@ console.log(a*b);
 36
         </pre></div>
 
-        <p>Or you can copy your code twice (without let in the copy), change variables and see the result of two multiplications</p>
+        <p>Or you can copy your code twice (without <b class="code">let</b> in the copy), change variables and see the result of two multiplications</p>
         <pre class="brush: javascript">
 let a = 5;
 let b = 6;
@@ -101,6 +102,7 @@ console.log(a*b);
 
         <pre class="brush: javascript">
 function multTwo(a, b) {
+
     return a*b;
 }
 
@@ -114,7 +116,7 @@ console.log(multTwo(6, 6));
 36
         </pre></div>
 
-        <p>As you can see, function multTwo now holds all of the logic, and you only change the arguments to see different results.</p>
+        <p>As you can see, function <b class="code">multTwo</b> now holds all of the logic, and you only change the arguments to see different results.</p>
 
 
     </div>
@@ -123,42 +125,48 @@ console.log(multTwo(6, 6));
 
 <div class="question-answer">
     <div class="question">
-        Awesome. Thank you, but can you please explain the structure of the function in more detail so I can freely use it in the other CheckiO missions
+        Awesome. Thank you, but can you please explain the structure of the function in more detail so I can freely use it in the other CheckiO missions.
     </div>
     <div class="answer">
         <p>Of course. Here is the function once again:</p>
 
         <pre class="brush: javascript">
 function multTwo(a, b) {
+
     return a*b;
 }
         </pre>
 
-        <p>Always starts with <b style="font-family: monospace;">function</b></p>
+        <p>Always starts with <b class="code">function</b>.</p>
 
-        <p>The name of the function <b style="font-family: monospace;">multTwo</b> - you will use the name to call the function in future</p>
+        <p>The name of the function <b class="code">multTwo</b> - you will use the name to call the function in future.</p>
 
-        <p>Two arguments <b style="font-family: monospace;">(a, b)</b> - those are variables that will get their values when the function is called. For example, when we call the function <b style="font-family: monospace;">multTwo(5, 6)</b> - inside the function, we set variable a to 5 and variable b to 6.</p>
+        <p>Two arguments <b class="code">(a, b)</b> - those are variables that will get
+            their values when the function is called. For example, when we call the function
+            <b class="code">multTwo(5, 6)</b> - inside the function, we set variable <b class="code">a</b> to <b class="code">5</b> and variable <b class="code">b</b> to <b class="code">6</b>.</p>
 
         <p>You can also see function definitions with type hints.</p>
 
         <pre class="brush: javascript">
 function multTwo(a: number, b: number): number {
+
     return a*b;
 }
         </pre>
 
-        <p>Don’t be confused by <b style="font-family: monospace;">: number</b>. It explains to the user (someone who reads the code) the expected type of arguments and the type of the result of the function call. But it is ok to ignore those for now.</p>
+        <p>Don’t be confused by <b class="code">: number</b>. It explains to the user (someone who reads the code) the expected type of arguments and the type of the result of the function call. But it is ok to ignore those for now.</p>
 
-        <p>Now the block of the function that inside of { and } and <b style="font-family: monospace;">return</b> says what should be the result of the function calls <b style="font-family: monospace;">    return a*b</b></p>
+        <p>Now the block of the function that inside of <b class="code">{</b> and <b class="code">}</b> and <b class="code">return</b> says what should be the result of the function calls <b class="code">    return a*b</b>.</p>
 
-        <p>In our example <b style="font-family: monospace;">console.log(multTwo(5, 6))</b> - the result of the multiplication of two values 5 and 6 will be returned and use ad the first argument for the function <b style="font-family: monospace;">console.log</b></p>
+        <p>In our example <b class="code">console.log(multTwo(5, 6))</b> - the result of the multiplication of two values <b class="code">5</b> and <b class="code">6</b> will be returned and use ad the first argument for the function <b class="code">console.log()</b>.</p>
 
-        <p>You function can have more than one line of code. For example, lets use one more variable c, where we put the result of the multiplication and return the result</p>
+        <p>You function can have more than one line of code. For example, lets use one more variable <b class="code">c</b>, where we put the result of the multiplication and return the result.</p>
 
         <pre class="brush: javascript">
 function multTwo(a, b) {
+
     let c = a*b;
+    
     return c;
 }
         </pre>
@@ -182,11 +190,11 @@ function multTwo(a, b) {
 
         <p>When something doesn’t work as expected - the panel will show you the call of the function for which is return the wrong value</p>
 
-        <p><center><img src="{{MEDIA}}py_check_failed.png" style="width: 100%; max-width: 900px;" /></center></p>
+        <p><center><img src="{{MEDIA}}js_check_failed.png" style="width: 100%; max-width: 900px;" /></center></p>
 
-        <p>or when it is error in assert</p>
+        <p>or when it is error in <b class="code">assert</b> </p>
 
-        <p><center><img src="{{MEDIA}}py_run_failed.png" style="width: 100%; max-width: 260px;" /></center></p>
+        <p><center><img src="{{MEDIA}}js_run_failed.png" style="width: 100%; max-width: 260px;" /></center></p>
 
     </div>
 </div>
@@ -194,10 +202,17 @@ function multTwo(a, b) {
 
 <div class="question-answer">
     <div class="question">
-        What solving missions give me on CheckiO?
+        What solving missions gives me on CheckiO?
     </div>
     <div class="answer">
-        <p>After solving missions on CheckiO, you can see solutions of other users, more functionality will be opened as your level is growing, more islands will be opened and so on and so on. We have a <a target="_blank" href="https://py.checkio.org/blog/checkio-intro-full-version-from-basic-to-advance-u/">full demo video (python version) that explains all of the benefits and how to get maximum out of using CheckiO</a>. (by the way, the video also covers solving the very first missions and explains how the asserts works, which we haven’t covered in the hints)</p>
+        <p>After solving missions on CheckiO, you can see solutions of other users,
+            more functionality will be opened as your level is growing, more islands
+            will be opened and so on and so on. We have a
+            <a target="_blank" href="https://py.checkio.org/blog/checkio-intro-full-version-from-basic-to-advance-u/">
+                full demo video (python version) that explains all of the benefits
+                and how to get maximum out of using CheckiO</a>.
+                (by the way, the video also covers solving the very first missions
+                and explains how the asserts works, which we haven’t covered in the hints).</p>
 
     </div>
 </div>

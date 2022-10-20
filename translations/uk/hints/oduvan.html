@@ -1,7 +1,7 @@
 <body data-author="oduvan">
 <div class="question-answer">
     <div class="question">
-        Я не розумію, як розв'язати цю місію.
+        <i>Я не розумію, як розв'язати цю місію.</i>
     </div>
     <div class="answer">
         <p>Кожен розв'язок розпочинається із порожньої функції …</p>
@@ -20,20 +20,21 @@ assert mult_two(0, 1) == 0
 </div>
 <div class="question-answer">
     <div class="question">
-        Що таке функція? Звучить трохи заплутано.
+        <i>Що таке функція? Звучить трохи заплутано.</i>
     </div>
     <div class="answer">
-        <p>Ось <a target="_blank" href="https://www.freecodecamp.org/news/python-functions-define-and-call-a-function/">дуже хороша і коротка стаття</a>, яка пояснює, як працюють функції в Python.</p>
+        <p>Ось <a target="_blank" href="https://www.freecodecamp.org/news/python-functions-define-and-call-a-function/">
+            дуже хороша і коротка стаття</a>, яка пояснює, як працюють функції в Python.</p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Чи можеш ти пояснити функції, використовуючи конкретно цю місію?
+        <i>Чи можеш ти пояснити функції, використовуючи конкретно цю місію?</i>
     </div>
     <div class="answer">
         <p>З великим задоволенням! Саме тому ми маємо підказки на CheckiO.</p>
         <p>Уяви, що тобі потрібно перемножити два числа і надрукувати (вивести) результат
-            так, щоб побачити його в консолі. Наприклад, 5 і 6.</p>
+            так, щоб побачити його в консолі. Наприклад, <b class="code">5</b> і <b class="code">6</b>.</p>
         <pre class="brush: python">
 print(5*6)
         </pre>
@@ -43,7 +44,7 @@ print(5*6)
 30
             </pre>
         </div>
-        <p>Тепер замість 5 і 6, ми можемо використати змінні. Для чого? Ти побачиш це у наступних прикладах.</p>
+        <p>Тепер замість <b class="code">5</b> і <b class="code">6</b>, ми можемо використати змінні. Для чого? Ти побачиш це у наступних прикладах.</p>
         <pre class="brush: python">
 a = 5
 b = 6
@@ -108,8 +109,8 @@ print(mult_two(6, 6))
 </div>
 <div class="question-answer">
     <div class="question">
-        Приголомшливо! Дякую, та чи можеш ти будь ласка пояснити структуру функції
-        більш детально, щоб я міг вільно використовувати це в інших місіях CheckiO?
+        <i>Приголомшливо! Дякую, та чи можеш ти будь ласка пояснити структуру функції
+        більш детально, щоб я міг вільно використовувати це в інших місіях CheckiO?</i>
     </div>
     <div class="answer">
         <p>Звісно! Ось запис функції ще раз:</p>
@@ -119,14 +120,18 @@ def mult_two(a, b):
     return a*b
         </pre>
         <p>Завжди починай з <b class="code">def</b>.</p>
+
         <p>Далі йде ім'я функції <b class="code">mult_two</b>
             - надалі ти будеш використовувати це ім'я для виклику функції.</p>
+
         <p>Два аргументи <b class="code">(a, b)</b> - це змінні,
             які набувають значень під час виклику функції. Наприклад, коли ти
             викликаєш функцію <b class="code">mult_two(5, 6)</b>
             - всередині функції змінній <b class="code">a</b>
-            присвоюється значення 5 і змінній <b class="code">b</b> - 6.</p>
+            присвоюється значення <b class="code">5</b> і змінній <b class="code">b</b> - <b class="code">6</b>.</p>
+            
         <p>Також, ти можеш бачити розширений запис виразу функції:</p>
+
         <pre class="brush: python">
 def mult_two(a: int, b: int) -> int:
 
@@ -150,7 +155,7 @@ def mult_two(a, b):
 </div>
 <div class="question-answer">
     <div class="question">
-        Зрозуміло. Дякую тобі, тепер все досить ясно. Але коли я написав коректну функцію, що мені робити далі?
+        <i>Зрозуміло. Дякую тобі, тепер все досить ясно. Але коли я написав коректну функцію, що мені робити далі?</i>
     </div>
     <div class="answer">
         <p>Вгорі редактора коду є дві кнопки - “Run Code” і “Check Solution”.</p>
@@ -158,22 +163,22 @@ def mult_two(a, b):
         <p><center><img src="{{MEDIA}}run_check_panel.png" style="width: 100%;" /></center></p>
 
         <p>Коли ти натиснеш першу, вона запустить код із редактора (включно із <b class="code">assert</b>).
-            Коли натиснеш “Check Solution” - система перевірить твою функції рядом тестів і покаже панель вітання “congratulations”, якщо все працює як очікувалось.</p>
+            Коли натиснеш “Check Solution” - система перевірить твою функцію рядом тестів і покаже панель вітання “congratulations”, якщо все працює як очікувалось.</p>
 
         <p><center><img src="{{MEDIA}}task_solved.png" style="width: 100%; max-width: 400px;" /></center></p>
 
-        <p>Якщо щось працює неочікувано,  панель покаже виклик функції, для якого повернуто не вірне значення.</p>
+        <p>Якщо щось працює неочікувано, панель покаже виклик функції, для якого повернуто не вірне значення.</p>
 
         <p><center><img src="{{MEDIA}}py_check_failed.png" style="width: 100%; max-width: 900px;" /></center></p>
 
-        <p>або коли помилка в <b class="code">assert</b></p>
+        <p>або коли помилка в <b class="code">assert</b>.</p>
 
         <p><center><img src="{{MEDIA}}py_run_failed.png" style="width: 100%; max-width: 260px;" /></center></p>
     </div>
 </div>
 <div class="question-answer">
     <div class="question">
-        Що дає мені розв'язування місій на CheckiO?
+        <i>Що дає мені розв'язування місій на CheckiO?</i>
     </div>
     <div class="answer">
         <p>Розв'язуючи місії на CheckiO, ти отримаєш доступ до розв'язків інших користувачів,
@@ -184,7 +189,7 @@ def mult_two(a, b):
 </div>
 <div class="question-answer">
     <div class="question">
-        Круто! Дякую.
+        <i>Круто! Дякую.</i>
     </div>
     <div class="answer">
         <p>Приємного написання коду!</p>
