@@ -1,29 +1,10 @@
 <body data-author="oduvan">
 <div class="question-answer">
     <div class="question">
-        <p>Я не розумію, як розв'язати цю місію.</p>
+        <p>Я не розумію, як розв'язати цю місію. Що таке функція? Звучить трохи заплутано.</p>
     </div>
     <div class="answer">
-        <p>Кожен розв'язок розпочинається із порожньої функції …</p>
-        <pre class="brush: python">
-def mult_two(a: int, b: int) -> int:
-    # your code here
-    return 0
-        </pre>
-        <p>… і ряду тверджень <b class="code">assert</b>, які перевіряються, коли ти запускаєш код.</p>
-        <pre class="brush: python">
-assert mult_two(3, 2) == 6
-assert mult_two(0, 1) == 0
-        </pre>
-        <p>Твоєю метою є заповнити порожню функцію правильним розв'язком.</p>
-    </div>
-</div>
-<div class="question-answer">
-    <div class="question">
-        <p>Що таке функція? Звучить трохи заплутано.</p>
-    </div>
-    <div class="answer">
-        <p>Ось <a target="_blank" href="https://www.freecodecamp.org/news/python-functions-define-and-call-a-function/">
+        <p>Ось <a target="_blank" href="https://www.bestprog.net/uk/2020/07/10/java-python-function-concept-of-function-general-form-examples-of-declaring-and-using-functions-ua/">
             дуже хороша і коротка стаття</a>, яка пояснює, як працюють функції в Python.</p>
     </div>
 </div>
@@ -98,11 +79,11 @@ print(mult_two(6, 6))
 30
 36</pre>
         </div>
-</div>
         <p>Як ти бачиш, функція <b class="code">mult_two</b> тепер містить всю логіку рішення і ти
             лише змінюєш значення аргументів, щоб отримати інший результат.</p>
     </div>
 </div>
+
 <div class="question-answer">
     <div class="question">
         <p>Приголомшливо! Дякую, та чи можеш ти будь ласка пояснити структуру функції
@@ -112,12 +93,19 @@ print(mult_two(6, 6))
         <p>Звичайно. Ось зображення, що показує структуру функцій:</p>
 
         <p><center><img src="{{MEDIA}}31.png" style="width: 80%;" /></center></p>
-        <p>Ось запис функції ще раз:</p>
-        <pre class="brush: python">
-def mult_two(a, b):
 
-    return a*b
+        <p>На CheckiO кожен розв'язок розпочинається із порожньої функції …</p>
+        <pre class="brush: python">
+def mult_two(a: int, b: int) -> int:
+    # your code here
+    return 0
         </pre>
+        <p>… і ряду тверджень <b class="code">assert</b>, які перевіряються, коли ти запускаєш код.</p>
+        <pre class="brush: python">
+assert mult_two(3, 2) == 6
+assert mult_two(0, 1) == 0
+        </pre>
+        <p><b>Твоєю метою є заповнити порожню функцію правильним розв'язком.</b></p>
         <p>Завжди починай з <b class="code">def</b>.</p>
 
         <p>Далі йде ім'я функції <b class="code">mult_two</b>
@@ -152,6 +140,7 @@ def mult_two(a, b):
         <p>Більше про базовий синтаксис Python і структуру блоків ти можеш прочитати в <a target="_blank" href="https://subscription.packtpub.com/book/programming/9781787283695/1/ch01lvl1sec02/python-basic-syntax-and-block-structure">цій статті</a>.</p>
     </div>
 </div>
+
 <div class="question-answer">
     <div class="question">
         <p>Зрозуміло. Дякую тобі, тепер все досить ясно. Але коли я написав коректну функцію, що мені робити далі?</p>
