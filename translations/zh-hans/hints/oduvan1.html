@@ -1,0 +1,190 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        我不知道如何解决这个任务。什么是函数？听起来有点令人困惑。
+    </div>
+    <div class="answer">
+        <p>这里有一个<a target="_blank" href="https://www.freecodecamp.org/news/python-functions-define-and-call-a-function/">very good and short article</a> ，解释了Python中函数的工作原理。</p>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        你能用这个特殊的任务来解释函数吗？
+    </div>
+    <div class="answer">
+        <p>与大快人心。这就是我们在CheckiO上有提示的原因</p>
+
+        <p>想象一下，你需要将两个数字相乘并打印（输出）结果，这样你就可以在控制台中看到它。例如，5和6。</p>
+
+        <pre class="brush: python">
+print(5*6)
+        </pre>
+
+        <div class="output"><p>输出：</p>
+        <pre>
+30</pre></div>
+
+        <p>现在我们可以用变量来代替5和6。为了什么？你会在后面的例子中看到。</p>
+        <pre class="brush: python">
+a = 5
+b = 6
+print(a*b)
+        </pre>
+
+        <div class="output"><p>输出：</p>
+        <pre>
+30</pre></div>
+
+        <p>你可以改变变量a，再次运行脚本，并看到不同的结果。</p>
+        <pre class="brush: python">
+a = 6
+b = 6
+print(a*b)
+        </pre>
+
+        <div class="output"><p>输出：</p>
+        <pre>
+36</pre></div>
+
+        <p>或者你可以把你的代码复制两次，改变变量，看到两次乘法的结果。</p>
+        <pre class="brush: python">
+a = 5
+b = 6
+print(a*b)
+
+
+a = 6
+b = 6
+print(a*b)
+        </pre>
+
+        <div class="output"><p>输出结果：</p>
+        <pre>
+30
+36</pre></div>
+
+        <p>现在我可以告诉你函数是如何简化上述代码的。</p>
+        <pre class="brush: python">
+def mult_two(a, b):
+
+    return a*b
+
+print(mult_two(5, 6))
+print(mult_two(6, 6))
+        </pre>
+        <div class="output"><p>输出结果：</p>
+        <pre>
+30
+36</pre>
+        </div>
+
+
+        <p>正如你所看到的，函数<b class="code">mult_two</b> ，现在掌握了所有的逻辑，你只需改变参数就能看到不同的结果。</p>
+
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        真棒。谢谢你，但你能不能更详细地解释一下这个函数的结构？
+    </div>
+    <div class="answer">
+        <p>当然可以。这里有一张图片，显示了函数结构：</p>
+        <p><center><img src="{{MEDIA}}py_function.png" style="width: 80%;" /></center></p>
+
+        <p>在CheckiO，每个解决方案都从一个空函数开始。比如说：</p>
+
+        <pre class="brush: python">
+def mult_two(a: int, b: int) -> int:
+# your code here
+return 0
+        </pre>
+        <p>...和一组<b class="code">assert</b> ，当你运行代码时，它测试你的函数。</p>
+        <pre class="brush: python">
+assert mult_two(3, 2) == 6
+assert mult_two(0, 1) == 0
+        </pre>
+        <p><b>Your goal is to fill an empty function with the correct solution.</b></p>
+
+        <p>总是以<b class="code">def</b> 开始。</p>
+
+        <p>函数的名称<b class="code">mult_two</b> - 你将来会用这个名称来调用这个函数</p>
+
+        <p>两个参数<b class="code">(a, b)</b> - 这些是变量，当函数被调用时将获得它们的值。例如，当我们调用函数<b class="code">mult_two(5, 6)</b> - 在函数内部，我们将变量a设置为5，变量b设置为6。</p>
+
+        <p>你还可以看到带有类型提示的函数定义。</p>
+
+        <pre class="brush: python">
+def mult_two(a: int, b: int) -> int:
+
+    return a*b
+        </pre>
+
+        <p>不要被<b class="code">: int</b> 和<b class="code">-> int</b> 所迷惑。它们向用户（阅读代码的人）解释了参数的预期类型和函数调用结果的类型。但现在可以忽略这些。</p>
+
+        <p>现在，以四个空格开始的函数块和<b class="code">return</b> ，说明了函数调用的结果应该是什么<b class="code">    return a*b</b> 。</p>
+
+        <p>在我们的例子中，<b class="code">print(mult_two(5, 6))</b> - 两个值5和6的乘法结果将被返回并作为函数<b class="code">print</b> 的第一个参数。</p>
+
+        <p>如果你想让你的函数中有多于一行的代码--所有的行都应该有前4个空格。例如，让我们再使用一个变量c，在这里我们放置乘法的结果并返回结果</p>
+
+        <pre class="brush: python">
+def mult_two(a, b):
+
+    c = a*b
+    
+    return c
+        </pre>
+
+        <p>更多关于Python的基本语法和代码块结构，你可以阅读<a target="_blank" href="https://subscription.packtpub.com/book/programming/9781787283695/1/ch01lvl1sec02/python-basic-syntax-and-block-structure">this article</a></p>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        好的。谢谢你，现在已经很清楚了。但是，当我有一个正确的函数时，我接下来应该怎么做？
+    </div>
+    <div class="answer">
+        <p>在代码编辑器的顶部，你有两个按钮，"运行代码 "和 "检查解决方案"。 </p>
+
+        <p><center><img src="{{MEDIA}}run_check_panel.png" style="width: 100%;" /></center></p>
+
+        <p>当你点击第一个按钮时 - 它从代码编辑器中运行代码。当你使用 "检查解决方案 "时--系统会检查你的功能，并在它按预期工作时显示 "祝贺 "面板。</p>
+
+        <p><center><img src="{{MEDIA}}task_solved.png" style="width: 100%; max-width: 400px;" /></center></p>
+
+        <p>当某些东西不能像预期的那样工作时--面板将显示该函数的调用，该函数的返回值是错误的</p>
+
+        <p><center><img src="{{MEDIA}}py_check_failed.png" style="width: 100%; max-width: 900px;" /></center></p>
+
+        <p>或当它是错误的<b class="code">assert</b></p>
+
+        <p><center><img src="{{MEDIA}}py_run_failed.png" style="width: 100%; max-width: 260px;" /></center></p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        在CheckiO上有什么解决方法？
+    </div>
+    <div class="answer">
+        <p>解决了CheckiO上的任务后，你可以看到其他用户的解决方案，随着你的水平不断提高，更多的功能将被打开，更多的岛屿将被打开，等等等等。我们有一个<a target="_blank" href="https://py.checkio.org/blog/checkio-intro-full-version-from-basic-to-advance-u/">full demo video that explains all of the benefits and how to get maximum out of using CheckiO</a>......（顺便说一下，该视频还包括解决第一个任务，并解释了断言的工作原理，这一点我们在提示中没有涉及）。</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        很好。谢谢你。
+    </div>
+    <div class="answer">
+        <p>有一个伟大的编码。</p>
+    </div>
+</div>
+</body>
