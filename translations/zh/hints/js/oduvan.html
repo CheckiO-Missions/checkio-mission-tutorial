@@ -1,0 +1,222 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        我不知道如何解决这个任务。
+    </div>
+    <div class="answer">
+        <p>每个解决方案都从一个空函数开始....</p>
+
+        <pre class="brush: javascript">
+function multTwo(a: number, b: number): number {
+    // your code here
+    return 0;
+}
+        </pre>
+
+        <p>...和一组<b class="code">assert</b> ，当你运行代码时，它可以测试你的函数。</p>
+
+        <pre class="brush: javascript">
+assert.equal(multTwo(3, 2), 6);
+assert.equal(multTwo(0, 1), 0);
+        </pre>
+
+        <p>你的目标是用正确的解决方案填充一个空函数。</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        什么是函数？听起来有点令人困惑。
+    </div>
+    <div class="answer">
+        <p>这里有一个<a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">
+            very good and short article</a> ，解释了函数在JavaScript中的工作原理。</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        你能用这个特殊的任务来解释函数吗？
+    </div>
+    <div class="answer">
+        <p>荣幸之至。这就是我们在CheckiO上有提示的原因!</p>
+
+        <p>想象一下，你需要将两个数字相乘，并打印（输出）结果，这样你就可以在控制台看到它。例如，<b class="code">5</b> 和<b class="code">6</b> 。</p>
+
+        <pre class="brush: javascript">
+console.log(5*6);
+        </pre>
+
+        <div class="output"><p>输出：</p>
+        <pre>
+30</pre></div>
+
+        <p>现在，我们可以使用变量来代替<b class="code">5</b> 和<b class="code">6</b> 。为了什么？你会在后面的例子中看到。</p>
+        <pre class="brush: javascript">
+let a = 5;
+let b = 6;
+console.log(a*b);
+        </pre>
+
+        <div class="output"><p>输出：</p>
+        <pre>
+30</pre></div>
+
+        <p>你可以改变变量<b class="code">a</b> ，再次运行脚本，并看到不同的结果。</p>
+        <pre class="brush: javascript">
+let a = 6;
+let b = 6;
+console.log(a*b);
+        </pre>
+
+        <div class="output"><p>输出：</p>
+        <pre>
+36</pre></div>
+
+        <p>或者你可以把你的代码复制两次（在复制过程中没有<b class="code">let</b> ），改变变量，看看两次乘法的结果。</p>
+        <pre class="brush: javascript">
+let a = 5;
+let b = 6;
+console.log(a*b);
+
+
+a = 6;
+b = 6;
+console.log(a*b);
+        </pre>
+
+        <div class="output"><p>输出：</p>
+        <pre>
+30
+36</pre></div>
+
+        <p>现在我可以告诉你函数是如何简化上述代码的。</p>
+        <pre class="brush: javascript">
+function multTwo(a, b) {
+
+    return a*b;
+}
+
+console.log(multTwo(5, 6));
+console.log(multTwo(6, 6));
+        </pre>
+        <div class="output"><p>输出：</p>
+        <pre>
+30
+36</pre></div>
+
+        <p>正如你所看到的，函数<b class="code">multTwo</b> ，现在掌握了所有的逻辑，你只需改变参数就能看到不同的结果。</p>
+
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        真棒。谢谢你，但能否请你更详细地解释一下这个函数的结构，以便我在其他CheckiO任务中自由使用它。
+    </div>
+    <div class="answer">
+        <p>当然可以。以下是该函数再次：</p>
+
+        <pre class="brush: javascript">
+function multTwo(a, b) {
+
+    return a*b;
+}
+        </pre>
+
+        <p>总是以<b class="code">function</b> 开始。</p>
+
+        <p>函数的名称<b class="code">multTwo</b> - 你将使用该名称在将来调用该函数。</p>
+
+        <p>两个参数<b class="code">(a, b)</b> - 这些是变量，当函数被调用时将得到它们的值。
+            它们的值，当函数被调用时。例如，当我们调用函数
+            <b class="code">multTwo(5, 6)</b> - 内，我们将变量<b class="code">a</b> 设置为<b class="code">5</b> ，将变量<b class="code">b</b> 设置为<b class="code">6</b> 。</p>
+
+        <p>你还可以看到带有类型提示的函数定义。</p>
+
+        <pre class="brush: javascript">
+function multTwo(a: number, b: number): number {
+
+    return a*b;
+}
+        </pre>
+
+        <p>不要被<b class="code">: number</b> 所迷惑。它向用户（阅读代码的人）解释了参数的预期类型和函数调用结果的类型。但现在忽略这些也是可以的。</p>
+
+        <p>现在，<b class="code">{</b> 、<b class="code">}</b> 和<b class="code">return</b> 里面的函数块说明了函数调用的结果应该是<b class="code">    return a*b</b> 。</p>
+
+        <p>在我们的例子中，<b class="code">console.log(multTwo(5, 6))</b> - 两个值相乘的结果<b class="code">5</b> 和<b class="code">6</b> 将被返回并作为函数<b class="code">console.log()</b> 的第一个参数。</p>
+
+        <p>你的函数可以有多于一行的代码。例如，让我们再使用一个变量<b class="code">c</b> ，在这里我们放置乘法的结果并返回结果。</p>
+
+        <pre class="brush: javascript">
+function multTwo(a, b) {
+
+    let c = a*b;
+    
+    return c;
+}
+        </pre>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        好的。谢谢你，现在已经很清楚了。但是，当我有一个正确的函数时，我接下来应该怎么做？
+    </div>
+    <div class="answer">
+        <p>在代码编辑器的顶部，你有两个按钮，"运行代码 "和 "检查解决方案"。 </p>
+
+        <p><center><img src="{{MEDIA}}run_check_panel.png" style="width: 100%;" /></center></p>
+
+        <p>当你点击第一个按钮时--它从代码编辑器中运行代码。当你使用 "检查解决方案 "时，系统会检查你的功能，并在它按预期工作时显示 "祝贺 "面板。</p>
+
+        <p><center><img src="{{MEDIA}}task_solved.png" style="width: 100%; max-width: 400px;" /></center></p>
+
+        <p>当某些东西不能像预期的那样工作时--面板会显示函数的调用，该函数的返回值是错误的</p>
+
+        <p><center><img src="{{MEDIA}}js_check_failed.png" style="width: 100%; max-width: 900px;" /></center></p>
+
+        <p>或当它在<b class="code">assert</b> 中出现错误时 </p>
+
+        <p><center><img src="{{MEDIA}}js_run_failed.png" style="width: 100%; max-width: 260px;" /></center></p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        在CheckiO上有什么解题任务？
+    </div>
+    <div class="answer">
+        <p>在CheckiO上解决了任务后，你可以看到其他用户的解决方案、
+            更多的功能将被打开，因为你的水平在增长，更多的岛屿
+            更多的岛屿将被打开，等等。我们有一个
+           <a target="_blank" href="https://py.checkio.org/blog/checkio-intro-full-version-from-basic-to-advance-u/">
+                full demo video (python version) that explains all of the benefits
+                and how to get maximum out of using CheckiO</a>.
+                (顺便说一下，该视频还包括解决第一个任务的问题
+                并解释了断言的作用，我们在提示中没有涉及）。</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        很好。谢谢你。
+    </div>
+    <div class="answer">
+        <p>祝你有一个好的编码。</p>
+    </div>
+</div>
+</body>
