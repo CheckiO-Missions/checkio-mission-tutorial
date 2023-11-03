@@ -1,0 +1,214 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        Ich weiß nicht, wie ich diese Aufgabe lösen soll.
+    </div>
+    <div class="answer">
+        <p>Jede Lösung beginnt mit einer leeren Funktion</p>
+
+        <pre class="brush: python">
+def mult_two(a: int, b: int) -> int:
+    # your code here
+    return 0
+        </pre>
+
+        <p>... und einer Reihe von <b class="code">assert</b>, die Ihre Funktion testet, wenn Sie den Code ausführen.</p>
+
+        <pre class="brush: python">
+assert mult_two(3, 2) == 6
+assert mult_two(0, 1) == 0
+        </pre>
+
+        <p>Ihr Ziel ist es, eine leere Funktion mit der richtigen Lösung zu füllen.</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Was ist eine Funktion? Klingt ein wenig verwirrend.
+    </div>
+    <div class="answer">
+        <p>Hier ist eine <a target="_blank" href="https://www.freecodecamp.org/news/python-functions-define-and-call-a-function/">very good and short article</a>, die erklärt, wie Funktionen in Python funktionieren.</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Können Sie Funktionen anhand dieser speziellen Aufgabe erklären?
+    </div>
+    <div class="answer">
+        <p>Mit dem größten Vergnügen. Deshalb haben wir Hinweise auf CheckiO</p>
+
+        <p>Stellen Sie sich vor, Sie müssen zwei Zahlen multiplizieren und das Ergebnis drucken (ausgeben), damit Sie es in der Konsole sehen können. Zum Beispiel: 5 und 6.</p>
+
+        <pre class="brush: python">
+print(5*6)
+        </pre>
+
+        <div class="output"><p>Ausgabe:</p>
+        <pre>
+30</pre></div>
+
+        <p>Anstelle von 5 und 6 können wir jetzt Variablen verwenden. Für was? Das werden Sie in den weiteren Beispielen sehen.</p>
+        <pre class="brush: python">
+a = 5
+b = 6
+print(a*b)
+        </pre>
+
+        <div class="output"><p>Ausgabe:</p>
+        <pre>
+30</pre></div>
+
+        <p>Sie können die Variable a ändern, das Skript erneut ausführen und das andere Ergebnis sehen</p>
+        <pre class="brush: python">
+a = 6
+b = 6
+print(a*b)
+        </pre>
+
+        <div class="output"><p>Ausgabe:</p>
+        <pre>
+36</pre></div>
+
+        <p>Oder Sie können Ihren Code zweimal kopieren, die Variablen ändern und das Ergebnis von zwei Multiplikationen sehen</p>
+        <pre class="brush: python">
+a = 5
+b = 6
+print(a*b)
+
+
+a = 6
+b = 6
+print(a*b)
+        </pre>
+
+        <div class="output"><p>Ausgabe:</p>
+        <pre>
+30
+36</pre></div>
+
+        <p>Jetzt kann ich Ihnen zeigen, wie die Funktion den obigen Code vereinfachen kann.</p>
+        <pre class="brush: python">
+def mult_two(a, b):
+
+    return a*b
+
+print(mult_two(5, 6))
+print(mult_two(6, 6))
+        </pre>
+        <div class="output"><p>Ausgabe:</p>
+        <pre>
+30
+36</pre>
+        </div>
+
+
+        <p>Wie Sie sehen, enthält die Funktion <b class="code">mult_two</b> nun die gesamte Logik, und Sie ändern nur die Argumente, um unterschiedliche Ergebnisse zu sehen.</p>
+
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Großartig. Danke, aber können Sie mir bitte die Struktur der Funktion genauer erklären, damit ich sie in den anderen CheckiO-Missionen frei verwenden kann
+    </div>
+    <div class="answer">
+        <p>Ja, natürlich. Hier ist ein Bild, das die Struktur der Funktion zeigt:</p>
+
+        <p><center><img src="{{MEDIA}}py_function.png" style="width: 80%;" /></center></p>
+
+        <p>Und hier ist noch einmal unsere Funktion:</p>
+        <pre class="brush: python">
+def mult_two(a, b):
+
+    return a*b
+        </pre>
+
+        <p>Sie beginnt immer mit <b class="code">def</b>.</p>
+
+        <p>Der Name der Funktion <b class="code">mult_two</b> - Sie werden den Namen verwenden, um die Funktion in Zukunft aufzurufen</p>
+
+        <p>Zwei Argumente <b class="code">(a, b)</b> - das sind Variablen, die ihre Werte erhalten, wenn die Funktion aufgerufen wird. Wenn wir z.B. die Funktion <b class="code">mult_two(5, 6)</b> - innerhalb der Funktion aufrufen, setzen wir die Variable a auf 5 und die Variable b auf 6.</p>
+
+        <p>Sie können auch Funktionsdefinitionen mit Typ-Hinweisen sehen.</p>
+
+        <pre class="brush: python">
+def mult_two(a: int, b: int) -> int:
+
+    return a*b
+        </pre>
+
+        <p>Lassen Sie sich nicht von <b class="code">: int</b> und <b class="code">-> int</b> verwirren. Sie erklären dem Benutzer (jemandem, der den Code liest) den erwarteten Typ der Argumente und den Typ des Ergebnisses des Funktionsaufrufs. Aber es ist in Ordnung, diese vorerst zu ignorieren.</p>
+
+        <p>Nun sagt der Block der Funktion, der mit vier Leerzeichen und <b class="code">return</b> beginnt, was das Ergebnis des Funktionsaufrufs <b class="code">    return a*b</b> sein soll.</p>
+
+        <p>In unserem Beispiel <b class="code">print(mult_two(5, 6))</b> - wird das Ergebnis der Multiplikation der beiden Werte 5 und 6 zurückgegeben und als erstes Argument für die Funktion <b class="code">print</b> verwendet.</p>
+
+        <p>Wenn Sie möchten, dass Ihre Funktion mehr als eine Codezeile enthält, sollten alle Zeilen die ersten 4 Leerzeichen enthalten. Lassen Sie uns zum Beispiel eine weitere Variable c verwenden, in die wir das Ergebnis der Multiplikation einfügen und das Ergebnis zurückgeben</p>
+
+        <pre class="brush: python">
+def mult_two(a, b):
+
+    c = a*b
+    
+    return c
+        </pre>
+
+        <p>Mehr über die grundlegende Syntax von Python und die Blockstruktur erfahren Sie in <a target="_blank" href="https://subscription.packtpub.com/book/programming/9781787283695/1/ch01lvl1sec02/python-basic-syntax-and-block-structure">this article</a></p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Gut. Danke, jetzt ist es klar genug. Aber wenn ich eine korrekte Funktion habe, was soll ich dann tun?
+    </div>
+    <div class="answer">
+        <p>Oben im Code-Editor haben Sie zwei Schaltflächen, "Code ausführen" und "Lösung prüfen". </p>
+
+        <p><center><img src="{{MEDIA}}run_check_panel.png" style="width: 100%;" /></center></p>
+
+        <p>Wenn Sie die erste drücken, wird der Code aus dem Code-Editor ausgeführt. Wenn Sie auf "Lösung prüfen" klicken, prüft das System Ihre Funktion und zeigt das Feld "Glückwunsch" an, wenn sie wie erwartet funktioniert.</p>
+
+        <p><center><img src="{{MEDIA}}task_solved.png" style="width: 100%; max-width: 400px;" /></center></p>
+
+        <p>Wenn etwas nicht wie erwartet funktioniert, zeigt Ihnen das Panel den Aufruf der Funktion an, die den falschen Wert zurückgibt</p>
+
+        <p><center><img src="{{MEDIA}}py_check_failed.png" style="width: 100%; max-width: 900px;" /></center></p>
+
+        <p>oder wenn es sich um einen Fehler in <b class="code">assert</b></p>
+
+        <p><center><img src="{{MEDIA}}py_run_failed.png" style="width: 100%; max-width: 260px;" /></center></p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Welche Lösungsmissionen gibt es bei CheckiO?
+    </div>
+    <div class="answer">
+        <p>Nachdem Sie auf CheckiO Missionen gelöst haben, können Sie die Lösungen anderer Benutzer sehen, es werden mehr Funktionen geöffnet, wenn Ihr Level wächst, es werden mehr Inseln geöffnet und so weiter und so fort. Wir haben ein <a target="_blank" href="https://py.checkio.org/blog/checkio-intro-full-version-from-basic-to-advance-u/">full demo video that explains all of the benefits and how to get maximum out of using CheckiO</a>. (Das Video behandelt übrigens auch das Lösen der allerersten Missionen und erklärt, wie die Asserts funktionieren, was wir in den Hinweisen nicht behandelt haben)</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Prima. Ich danke Ihnen.
+    </div>
+    <div class="answer">
+        <p>Viel Spaß beim Coding.</p>
+    </div>
+</div>
+</body>

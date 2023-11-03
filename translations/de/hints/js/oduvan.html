@@ -1,0 +1,222 @@
+<body data-author="oduvan">
+<div class="question-answer">
+    <div class="question">
+        Ich weiß nicht, wie ich diese Mission lösen soll.
+    </div>
+    <div class="answer">
+        <p>Jede Lösung beginnt mit einer leeren Funktion ..</p>
+
+        <pre class="brush: javascript">
+function multTwo(a: number, b: number): number {
+    // your code here
+    return 0;
+}
+        </pre>
+
+        <p>... und einer Reihe von <b class="code">assert</b>, die Ihre Funktion testet, wenn Sie den Code ausführen.</p>
+
+        <pre class="brush: javascript">
+assert.equal(multTwo(3, 2), 6);
+assert.equal(multTwo(0, 1), 0);
+        </pre>
+
+        <p>Ihr Ziel ist es, eine leere Funktion mit der richtigen Lösung zu füllen.</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Was ist eine Funktion? Klingt ein wenig verwirrend.
+    </div>
+    <div class="answer">
+        <p>Hier ist eine <a target="_blank" href="https://www.w3schools.com/js/js_functions.asp">
+            very good and short article</a>, die erklärt, wie Funktionen in JavaScript funktionieren.</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Können Sie Funktionen anhand dieser speziellen Aufgabe erklären?
+    </div>
+    <div class="answer">
+        <p>Mit dem größten Vergnügen. Dafür haben wir Hinweise auf CheckiO!</p>
+
+        <p>Stellen Sie sich vor, Sie müssen zwei Zahlen multiplizieren und das Ergebnis drucken (ausgeben), damit Sie es in der Konsole sehen können. Zum Beispiel: <b class="code">5</b> und <b class="code">6</b>.</p>
+
+        <pre class="brush: javascript">
+console.log(5*6);
+        </pre>
+
+        <div class="output"><p>Ausgabe:</p>
+        <pre>
+30</pre></div>
+
+        <p>Anstelle von <b class="code">5</b> und <b class="code">6</b> können wir nun Variablen verwenden. Für was? Das werden Sie in den weiteren Beispielen sehen.</p>
+        <pre class="brush: javascript">
+let a = 5;
+let b = 6;
+console.log(a*b);
+        </pre>
+
+        <div class="output"><p>Ausgabe:</p>
+        <pre>
+30</pre></div>
+
+        <p>Sie können die Variable <b class="code">a</b> ändern, das Skript erneut ausführen und das unterschiedliche Ergebnis sehen</p>
+        <pre class="brush: javascript">
+let a = 6;
+let b = 6;
+console.log(a*b);
+        </pre>
+
+        <div class="output"><p>Ausgabe:</p>
+        <pre>
+36</pre></div>
+
+        <p>Oder Sie können Ihren Code zweimal kopieren (ohne <b class="code">let</b> in der Kopie), die Variablen ändern und das Ergebnis von zwei Multiplikationen sehen</p>
+        <pre class="brush: javascript">
+let a = 5;
+let b = 6;
+console.log(a*b);
+
+
+a = 6;
+b = 6;
+console.log(a*b);
+        </pre>
+
+        <div class="output"><p>Ausgabe:</p>
+        <pre>
+30
+36</pre></div>
+
+        <p>Jetzt kann ich Ihnen zeigen, wie die Funktion den obigen Code vereinfachen kann.</p>
+        <pre class="brush: javascript">
+function multTwo(a, b) {
+
+    return a*b;
+}
+
+console.log(multTwo(5, 6));
+console.log(multTwo(6, 6));
+        </pre>
+        <div class="output"><p>Ausgabe:</p>
+        <pre>
+30
+36</pre></div>
+
+        <p>Wie Sie sehen, enthält die Funktion <b class="code">multTwo</b> jetzt die gesamte Logik, und Sie ändern nur die Argumente, um unterschiedliche Ergebnisse zu sehen.</p>
+
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Großartig. Danke, aber können Sie mir bitte die Struktur der Funktion genauer erklären, damit ich sie in den anderen CheckiO-Missionen frei verwenden kann.
+    </div>
+    <div class="answer">
+        <p>Ja, natürlich. Hier ist die Funktion noch einmal:</p>
+
+        <pre class="brush: javascript">
+function multTwo(a, b) {
+
+    return a*b;
+}
+        </pre>
+
+        <p>Sie beginnt immer mit <b class="code">function</b>.</p>
+
+        <p>Der Name der Funktion <b class="code">multTwo</b> - Sie werden den Namen verwenden, um die Funktion in Zukunft aufzurufen.</p>
+
+        <p>Zwei Argumente <b class="code">(a, b)</b> - das sind Variablen, die ihre Werte erhalten werden
+            ihre Werte erhalten, wenn die Funktion aufgerufen wird. Wenn wir zum Beispiel die Funktion
+            <b class="code">multTwo(5, 6)</b> - innerhalb der Funktion aufrufen, setzen wir die Variable <b class="code">a</b> auf <b class="code">5</b> und die Variable <b class="code">b</b> auf <b class="code">6</b>.</p>
+
+        <p>Sie können auch Funktionsdefinitionen mit Typ-Hinweisen sehen.</p>
+
+        <pre class="brush: javascript">
+function multTwo(a: number, b: number): number {
+
+    return a*b;
+}
+        </pre>
+
+        <p>Lassen Sie sich nicht von <b class="code">: number</b> verwirren. Sie erklärt dem Benutzer (jemandem, der den Code liest) den erwarteten Typ der Argumente und den Typ des Ergebnisses des Funktionsaufrufs. Aber es ist in Ordnung, diese Hinweise erst einmal zu ignorieren.</p>
+
+        <p>Jetzt sagt der Block der Funktion, der sich innerhalb von <b class="code">{</b> und <b class="code">}</b> und <b class="code">return</b> befindet, was das Ergebnis der Funktionsaufrufe <b class="code">    return a*b</b> sein soll.</p>
+
+        <p>In unserem Beispiel <b class="code">console.log(multTwo(5, 6))</b> - wird das Ergebnis der Multiplikation von zwei Werten <b class="code">5</b> und <b class="code">6</b> zurückgegeben und als erstes Argument für die Funktion <b class="code">console.log()</b> verwendet.</p>
+
+        <p>Ihre Funktion kann mehr als eine Codezeile haben. Lassen Sie uns zum Beispiel eine weitere Variable <b class="code">c</b> verwenden, in der wir das Ergebnis der Multiplikation ablegen und das Ergebnis zurückgeben.</p>
+
+        <pre class="brush: javascript">
+function multTwo(a, b) {
+
+    let c = a*b;
+    
+    return c;
+}
+        </pre>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Nun gut. Danke, jetzt ist es klar genug. Aber wenn ich eine korrekte Funktion habe, was soll ich dann tun?
+    </div>
+    <div class="answer">
+        <p>Oben im Code-Editor haben Sie zwei Schaltflächen, "Code ausführen" und "Lösung prüfen". </p>
+
+        <p><center><img src="{{MEDIA}}run_check_panel.png" style="width: 100%;" /></center></p>
+
+        <p>Wenn Sie die erste drücken, wird der Code aus dem Code-Editor ausgeführt. Wenn Sie auf "Lösung prüfen" klicken, prüft das System Ihre Funktion und zeigt das Feld "Glückwunsch" an, wenn sie wie erwartet funktioniert.</p>
+
+        <p><center><img src="{{MEDIA}}task_solved.png" style="width: 100%; max-width: 400px;" /></center></p>
+
+        <p>Wenn etwas nicht wie erwartet funktioniert, zeigt Ihnen das Panel den Aufruf der Funktion an, die den falschen Wert zurückgibt</p>
+
+        <p><center><img src="{{MEDIA}}js_check_failed.png" style="width: 100%; max-width: 900px;" /></center></p>
+
+        <p>oder wenn es sich um einen Fehler in <b class="code">assert</b> handelt </p>
+
+        <p><center><img src="{{MEDIA}}js_run_failed.png" style="width: 100%; max-width: 260px;" /></center></p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Welche Lösungsmissionen gibt es bei CheckiO?
+    </div>
+    <div class="answer">
+        <p>Nachdem Sie Missionen auf CheckiO gelöst haben, können Sie die Lösungen anderer Benutzer sehen,
+            werden mit steigendem Level mehr Funktionen freigeschaltet, mehr Inseln
+            werden geöffnet und so weiter und so fort. Wir haben eine
+           <a target="_blank" href="https://py.checkio.org/blog/checkio-intro-full-version-from-basic-to-advance-u/">
+                full demo video (python version) that explains all of the benefits
+                and how to get maximum out of using CheckiO</a>.
+                (das Video behandelt übrigens auch das Lösen der allerersten Missionen
+                und erklärt, wie die Asserts funktionieren, die wir in den Hinweisen nicht behandelt haben).</p>
+
+    </div>
+</div>
+
+
+<div class="question-answer">
+    <div class="question">
+        Super. Ich danke Ihnen.
+    </div>
+    <div class="answer">
+        <p>Viel Spaß beim Programmieren.</p>
+    </div>
+</div>
+</body>
